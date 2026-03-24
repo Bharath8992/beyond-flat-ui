@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Image Debug Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding: 20px; background: #f8f9fa; }
+        .container { max-width: 1200px; }
+        .card { margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .image-test { max-width: 100%; max-height: 200px; border-radius: 5px; margin: 10px 0; }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .url-display { word-break: break-all; background: #e9ecef; padding: 10px; border-radius: 5px; }
+        .fixed-url { background: #fff3cd; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">🔍 Hero Image URL Debug Tool</h1>
+        
+        <!-- Problem URL Section -->
+        <div class="card p-4">
+            <h3 class="text-danger">⚠️ Detected Issue</h3>
+            <p>The URL has a <strong>double slash (//)</strong> after the domain name:</p>
+            <div class="url-display mb-3">
+                <code>https://seashell-hare-940207.hostingersite.com//hero-images/020bf3d9-c05e-4497-a3fd-f36771133c01.jpg</code>
+            </div>
+            <div class="fixed-url mb-3">
+                <strong>✅ Should be:</strong><br>
+                <code>https://seashell-hare-940207.hostingersite.com/hero-images/020bf3d9-c05e-4497-a3fd-f36771133c01.jpg</code>
+            </div>
+        </div>
+
+        <!-- Image Tester -->
+        <div class="card p-4">
+            <h3>🖼️ Image URL Tester</h3>
+            <div class="mb-3">
+                <label class="form-label">Enter Image URL to Test:</label>
+                <input type="text" id="imageUrlInput" class="form-control" 
+                       value="https://seashell-hare-940207.hostingersite.com//hero-images/020bf3d9-c05e-4497-a3fd-f36771133c01.jpg">
+            </div>
+            <button class="btn btn-primary" onclick="testUrl()">Test URL</button>
+            <button class="btn btn-warning" onclick="fixAndTest()">Fix Double Slash & Test</button>
+            
+            <div id="testResult" class="mt-3"></div>
+            <div id="imageDisplay" class="mt-3"></div>
+        </div>
+
+        <!-- Database Slides Checker -->
+        <div class="card p-4">
+            <h3>📋 Database Slides Checker</h3>
+            <div class="mb-3">
+                <label class="form-label">Auth Token:</label>
+                <input type="text" id="tokenInput" class="form-control" 
+                       placeholder="Paste your auth token" value="">
+            </div>
+            <button class="btn btn-info" onclick="checkSlides()">Load Slides from Database</button>
+            <div id="slidesList" class="mt-3"></div>
+        </div>
+
+        <!-- Manual URL Fixer -->
+        <div class="card p-4">
+            <h3>🔧 Manual URL Fixer</h3>
+            <p>Enter the filename to generate correct URLs:</p>
+            <div class="mb-3">
+                <label class="form-label">Filename:</label>
+                <input type="text" id="filenameInput" class="form-control" 
+                       value="020bf3d9-c05e-4497-a3fd-f36771133c01.jpg">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-success w-100 mb-2" onclick="generateCorrectUrl()">
+                        Generate Correct URL
+                    </button>
+                    <div id="correctUrlOutput" class="mt-2 p-2 bg-light"></div>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-danger w-100 mb-2" onclick="testFileExists()">
+                        Test If File Exists
+                    </button>
+                    <div id="fileExistsOutput" class="mt-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Solution Guide -->
+        <div class="card p-4">
+            <h3>🔧 How to Fix in Your Code</h3>
+            <div class="alert alert-warning">
+                <strong>In uploadHelper.js, change this:</strong>
+                <pre class="mt-2"><code>const url = `${baseUrl}/${folder}/${uniqueName}`;</code></pre>
+                <strong>To this (remove trailing slash from baseUrl):</strong>
+                <pre class="mt-2"><code>// Make sure baseUrl has no trailing slash
+const baseUrl = (process.env.BASE_URL || "https://seashell-hare-940207.hostingersite.com").replace(/\/$/, '');
+const url = `${baseUrl}/${folder}/${uniqueName}`;</code></pre>
+            </div>
+            
+            <div class="alert alert-info">
+                <strong>Or better yet, use this safer version:</strong>
+                <pre class="mt-2"><code>// Remove trailing slash from baseUrl and leading slash from folder
+const baseUrl = (process.env.BASE_URL || "https://seashell-hare-940207.hostingersite.com").replace(/\/$/, '');
+const folderPath = folder.replace(/^\//, '');
+const url = `${baseUrl}/${folderPath}/${uniqueName}`;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = "https://seashell-hare-940207.hostingersite.com/api";
+        const HERO_API = `${API_BASE}/hero`;
+
+        // Test URL
+        window.testUrl = function() {
+            const url = document.getElementById('imageUrlInput').value;
+            const resultDiv = document.getElementById('testResult');
+            const imageDiv = document.getElementById('imageDisplay');
+            
+            resultDiv.innerHTML = 'Testing...';
+            imageDiv.innerHTML = '';
+            
+            // Check for double slash
+            if (url.includes('//hero-images') || url.match(/\/\/[^\/]/)) {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-warning">
+                        ⚠️ Double slash detected! This will cause 404 errors.
+                    </div>
+                `;
+            }
+            
+            const img = new Image();
+            img.onload = function() {
+                resultDiv.innerHTML = `
+                    <div class="alert success">
+                        ✅ Image loaded successfully! URL is correct.
+                    </div>
+                `;
+                imageDiv.innerHTML = '<img src="' + url + '" class="image-test" alt="Test image">';
+            };
+            img.onerror = function() {
+                resultDiv.innerHTML = `
+                    <div class="alert error">
+                        ❌ Failed to load image. Check URL and file existence.
+                    </div>
+                `;
+            };
+            img.src = url;
+        };
+
+        // Fix double slash and test
+        window.fixAndTest = function() {
+            const url = document.getElementById('imageUrlInput').value;
+            const fixedUrl = url.replace(/([^:]\/)\//g, '$1');
+            
+            document.getElementById('imageUrlInput').value = fixedUrl;
+            testUrl();
+        };
+
+        // Check slides from database
+        window.checkSlides = async function() {
+            const token = document.getElementById('tokenInput').value;
+            if (!token) {
+                alert('Please enter your auth token');
+                return;
+            }
+
+            const slidesList = document.getElementById('slidesList');
+            slidesList.innerHTML = 'Loading...';
+
+            try {
+                const res = await fetch(HERO_API, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const data = await res.json();
+
+                if (data.success && data.data) {
+                    let html = '<h6>Slides with image URLs:</h6>';
+                    data.data.forEach(slide => {
+                        const hasDoubleSlash = slide.backgroundImage?.includes('//hero-images');
+                        const status = hasDoubleSlash ? '⚠️ Double slash' : '✅ OK';
+                        const bgColor = hasDoubleSlash ? 'bg-warning' : 'bg-success';
+                        
+                        html += `
+                            <div class="mb-2 p-2 ${bgColor} text-white rounded">
+                                <strong>${slide.title}</strong><br>
+                                <small>URL: ${slide.backgroundImage || 'No image'}</small><br>
+                                <small>Status: ${status}</small>
+                                ${hasDoubleSlash ? `
+                                    <br><button class="btn btn-sm btn-light mt-1" onclick="fixSlideUrl('${slide._id}', '${slide.backgroundImage}')">
+                                        Fix This URL
+                                    </button>
+                                ` : ''}
+                            </div>
+                        `;
+                    });
+                    slidesList.innerHTML = html;
+                } else {
+                    slidesList.innerHTML = 'Failed to load slides';
+                }
+            } catch (error) {
+                slidesList.innerHTML = 'Error: ' + error.message;
+            }
+        };
+
+        // Generate correct URL
+        window.generateCorrectUrl = function() {
+            const filename = document.getElementById('filenameInput').value;
+            const correctUrl = `https://seashell-hare-940207.hostingersite.com/hero-images/${filename}`;
+            document.getElementById('correctUrlOutput').innerHTML = `
+                <strong>Correct URL:</strong><br>
+                <code>${correctUrl}</code>
+            `;
+        };
+
+        // Test if file exists
+        window.testFileExists = async function() {
+            const filename = document.getElementById('filenameInput').value;
+            const output = document.getElementById('fileExistsOutput');
+            
+            // Try debug endpoint
+            try {
+                const res = await fetch(`https://seashell-hare-940207.hostingersite.com/debug/file/hero-images/${filename}`);
+                const data = await res.json();
+                
+                if (data.success) {
+                    output.innerHTML = `
+                        <div class="alert success">
+                            ✅ File exists on server!<br>
+                            Path: ${data.path}<br>
+                            Size: ${data.size} bytes
+                        </div>
+                    `;
+                } else {
+                    output.innerHTML = `
+                        <div class="alert error">
+                            ❌ File not found on server<br>
+                            Checked path: ${data.path}
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                output.innerHTML = `
+                    <div class="alert error">
+                        ❌ Debug endpoint error: ${error.message}
+                    </div>
+                `;
+            }
+        };
+
+        // Fix slide URL (would need API implementation)
+        window.fixSlideUrl = function(slideId, badUrl) {
+            const fixedUrl = badUrl.replace(/([^:]\/)\//g, '$1');
+            alert(`Would update slide ${slideId} with URL:\n${fixedUrl}`);
+            // In production, you'd call an API to update this
+        };
+    </script>
+</body>
+</html>
