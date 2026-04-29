@@ -700,136 +700,232 @@
     /* ── PROJECTS ── */
     .projects-section {
       padding: 8rem 4rem;
-      background: var(--ink);
-      border-top: 1px solid rgba(255,255,255,0.06);
+      background: #0c0b08;
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
     .projects-section .section-label { color: var(--gold-light); }
     .projects-section .section-label::before { background: var(--gold-light); }
-    .projects-section .section-heading { color: var(--warm-white); }
+    .projects-section .section-heading { color: #f0ede6; }
     .proj-intro {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
       align-items: end;
-      margin-bottom: 5rem;
+      margin-bottom: 4rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .proj-desc {
       font-size: 0.95rem;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.4);
       line-height: 1.8;
       font-weight: 300;
     }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5px;
-      background: rgba(255,255,255,0.06);
+
+    /* ── project cards — uniform rows ── */
+    .projects-list {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid rgba(255,255,255,0.07);
     }
-    .proj-card {
-      background: var(--ink-soft);
-      padding: 2.5rem;
-      transition: background 0.3s;
+    .pcard {
+      display: grid;
+      grid-template-columns: 72px 1fr 220px;
+      gap: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
       position: relative;
+      background: transparent;
+      transition: background 0.3s ease;
       overflow: hidden;
     }
-    .proj-card:hover { background: #1e1c18; }
-    .proj-card.featured {
-      grid-column: span 2;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
+    .pcard:last-child { border-bottom: none; }
+    .pcard::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--gold), var(--gold-light));
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.35s ease;
     }
-    .proj-num {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      color: rgba(200,150,62,0.5);
-      letter-spacing: 0.1em;
-      margin-bottom: 1.5rem;
-      display: block;
-    }
-    .proj-name {
-      font-family: 'Instrument Serif', serif;
-      font-size: 1.45rem;
-      color: var(--warm-white);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.01em;
-    }
-    .proj-body {
-      font-size: 0.87rem;
-      color: rgba(255,255,255,0.45);
-      line-height: 1.7;
-      font-weight: 300;
-      margin-bottom: 1.5rem;
-    }
-    .proj-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-    }
-    .proj-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--gold-light);
-      background: rgba(200,150,62,0.08);
-      border: 1px solid rgba(200,150,62,0.2);
-      padding: 0.25rem 0.6rem;
-      border-radius: 2px;
-      letter-spacing: 0.03em;
-    }
-    .proj-emoji {
-      font-size: 3.5rem;
-      display: block;
-      margin-bottom: 1rem;
-      line-height: 1;
-    }
+    .pcard:hover { background: rgba(255,255,255,0.022); }
+    .pcard:hover::before { transform: scaleY(1); }
 
-    /* Featured project visual */
-    .proj-visual {
-      height: 200px;
-      border: 1px solid rgba(200,150,62,0.15);
-      border-radius: 4px;
+    .pcard-index {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 4rem;
-      background: rgba(255,255,255,0.02);
+      padding: 2.5rem 0;
+      border-right: 1px solid rgba(255,255,255,0.07);
+    }
+    .pcard-index-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      color: rgba(200,150,62,0.35);
+      letter-spacing: 0.1em;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      user-select: none;
     }
 
-    /* Live sites */
-    .live-sites {
-      margin-top: 1.5px;
-      background: rgba(255,255,255,0.02);
-      padding: 2.5rem;
+    .pcard-body {
+      padding: 2.5rem 2.5rem 2.25rem;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+    }
+    .pcard-top {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .pcard-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.55rem;
+      border-radius: 2px;
+      background: rgba(200,150,62,0.08);
+      border: 1px solid rgba(200,150,62,0.2);
+      color: rgba(200,150,62,0.7);
+    }
+    .pcard-badge.live-badge {
+      background: rgba(42,156,114,0.08);
+      border-color: rgba(42,156,114,0.25);
+      color: #3ab87e;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .pcard-badge.live-badge::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #3ab87e;
+      display: inline-block;
+      animation: blink 2s infinite;
+    }
+    @keyframes blink {
+      0%,100% { opacity:1; } 50% { opacity:0.3; }
+    }
+    .pcard-name {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.35rem;
+      color: #f0ede6;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.65rem;
+      line-height: 1.2;
+    }
+    .pcard-desc {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.75;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    .pcard-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: auto;
+    }
+    .pcard-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      color: rgba(200,150,62,0.65);
+      background: rgba(200,150,62,0.05);
+      border: 1px solid rgba(200,150,62,0.12);
+      padding: 0.2rem 0.5rem;
+      border-radius: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    /* Uniform right action column */
+    .pcard-actions {
+      padding: 2.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+      border-left: 1px solid rgba(255,255,255,0.07);
+    }
+    .plink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.07em;
+      text-decoration: none;
+      padding: 0.55rem 0.9rem;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    .plink.live {
+      background: rgba(42,156,114,0.08);
+      border-color: rgba(42,156,114,0.22);
+      color: #3ab87e;
+    }
+    .plink.live:hover {
+      background: rgba(42,156,114,0.16);
+      border-color: rgba(42,156,114,0.45);
+      color: #5dd6a0;
+    }
+    .plink.git {
+      background: rgba(255,255,255,0.03);
+      border-color: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.45);
+    }
+    .plink.git:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.22);
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* Other deployments strip */
+    .deployments-strip {
+      max-width: 1200px;
+      margin: 1px auto 0;
+      background: rgba(255,255,255,0.015);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-top: none;
+      padding: 1.5rem 2.5rem;
+      display: flex;
       align-items: center;
       gap: 2rem;
       flex-wrap: wrap;
     }
-    .live-label {
+    .deployments-label {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      color: rgba(200,150,62,0.6);
-      letter-spacing: 0.1em;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: rgba(200,150,62,0.45);
+      text-transform: uppercase;
       white-space: nowrap;
     }
-    .live-links {
+    .deployments-links {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
-    .live-link {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.5);
-      text-decoration: none;
-      padding: 0.35rem 0.8rem;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 2px;
-      transition: all 0.2s;
+
+    @media (max-width: 900px) {
+      .projects-section { padding: 5rem 1.5rem; }
+      .proj-intro { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem; }
+      .pcard { grid-template-columns: 48px 1fr; }
+      .pcard-actions { display: none; }
+      .pcard-body { padding: 2rem 1.5rem; }
     }
-    .live-link:hover { border-color: var(--gold-light); color: var(--gold-light); }
 
     /* ── CONTACT ── */
     .contact-section {
@@ -1097,7 +1193,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
     </ul>
-    <a href="mailto:bharath122020@gmail.com" class="nav-cta">Contact</a>
+    <!-- <a href="mailto:bharath122020@gmail.com" class="nav-cta">Contact</a> -->
   </nav>
 
   <!-- ── HERO ── -->
@@ -1147,7 +1243,7 @@
         </div>
       </div>
       <div class="animate-in-d4" style="font-size:0.8rem; color:var(--muted); line-height:1.7; font-weight:300;">
-        Target role: <strong style="color:var(--ink);">Senior Backend / Full Stack — 10–15 LPA</strong><br>
+        Target role: <strong style="color:var(--ink);">Senior Backend / Full Stack </strong><br>
         Stack: Django · React · PostgreSQL · Node.js · ML/AI<br>
         B.Tech CSE — SRMIST (2024)
       </div>
@@ -1190,7 +1286,7 @@
         <div class="detail-row"><span class="detail-key">Education</span><span class="detail-val">B.Tech CSE — SRMIST (2024)</span></div>
         <div class="detail-row"><span class="detail-key">Availability</span><span class="detail-val green">● Open to Opportunities</span></div>
         <div class="detail-row"><span class="detail-key">Work Mode</span><span class="detail-val">On-site · Remote · Global</span></div>
-        <div class="detail-row"><span class="detail-key">Target CTC</span><span class="detail-val">10–15 LPA</span></div>
+        <div class="detail-row"><span class="detail-key">Target CTC</span><span class="detail-val">As per industry standards</span></div>
         <div class="detail-row"><span class="detail-key">Email</span><span class="detail-val"><a href="mailto:bharath122020@gmail.com">bharath122020@gmail.com</a></span></div>
         <div class="detail-row"><span class="detail-key">Phone</span><span class="detail-val">+91 6379573737</span></div>
         <div class="detail-row"><span class="detail-key">GitHub</span><span class="detail-val"><a href="https://github.com/Bharath8992" target="_blank" rel="noopener">github.com/Bharath8992 ↗</a></span></div>
@@ -1339,77 +1435,194 @@
         <div class="section-label reveal">Projects</div>
         <h2 class="section-heading reveal">Production-grade <em>applications</em></h2>
       </div>
-      <p class="proj-desc reveal">Real-world applications built from scratch — designed for scalability, reliability, and business impact.</p>
+      <p class="proj-desc reveal">Real-world applications shipped end-to-end — from architecture and API design to VPS deployment. Every project is live and serving users.</p>
     </div>
 
-    <div class="projects-grid">
-      <div class="proj-card featured reveal">
-        <div>
-          <span class="proj-num">01 — Featured</span>
-          <div class="proj-name">Real Estate Management Platform</div>
-          <p class="proj-body">Full-stack property management system with user authentication, property listing workflows, admin dashboards, and real-time search with advanced filters. Built with REST APIs for scalability and maintainability.</p>
-          <div class="proj-stack">
-            <span class="proj-tag">Python</span>
-            <span class="proj-tag">Django</span>
-            <span class="proj-tag">DRF</span>
-            <span class="proj-tag">JavaScript</span>
-            <span class="proj-tag">SQL</span>
-            <span class="proj-tag">HTML/CSS</span>
+    <div class="projects-list">
+
+    
+
+
+      <div class="pcard reveal">
+        <div class="pcard-index">
+          <span class="pcard-index-num">01 — FEATURED</span>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top">
+            <span class="pcard-badge live-badge">Live</span>
+            <span class="pcard-badge">Full Stack</span>
+            <span class="pcard-badge">Real Estate</span>
+          </div>
+          <div class="pcard-name">Real Estate Management Platform</div>
+          <p class="pcard-desc">Full-stack property management system with user authentication, property listing workflows, advanced search filters, admin dashboards, and booking management. Built with DRF REST APIs for scalability and maintained in production at Mckbytes Technologies.</p>
+          <div class="pcard-stack">
+            <span class="pcard-tag">Python</span>
+            <span class="pcard-tag">Django</span>
+            <span class="pcard-tag">DRF</span>
+            <span class="pcard-tag">JavaScript</span>
+            <span class="pcard-tag">PostgreSQL</span>
+            <span class="pcard-tag">HTML5</span>
+            <span class="pcard-tag">CSS3</span>
+            <span class="pcard-tag">REST APIs</span>
           </div>
         </div>
-        <div class="proj-visual">🏠</div>
-      </div>
-
-      <div class="proj-card reveal">
-        <span class="proj-emoji">🛒</span>
-        <span class="proj-num">02</span>
-        <div class="proj-name">E-Commerce Web Application</div>
-        <p class="proj-body">Complete e-commerce platform with secure backend APIs, product management system, responsive shopping interface, and scalable architecture. Deployed on VPS with full domain configuration.</p>
-        <div class="proj-stack">
-          <span class="proj-tag">React.js</span>
-          <span class="proj-tag">Node.js</span>
-          <span class="proj-tag">Express.js</span>
-          <span class="proj-tag">MongoDB</span>
-          <span class="proj-tag">VPS</span>
+        <div class="pcard-actions">
+          <div class="pcard-icon"></div>
+          <div class="pcard-links">
+            <a href="http://squarebox.mckbytes.tech/" target="_blank" rel="noopener" class="plink live">
+              <span class="plink-icon">↗</span> squarebox.mckbytes
+            </a>
+            <a href="https://github.com/Bharath8992" target="_blank" rel="noopener" class="plink git">
+              <span class="plink-icon">⌥</span> GitHub
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="proj-card reveal reveal-delay-1">
-        <span class="proj-emoji">📄</span>
-        <span class="proj-num">03</span>
-        <div class="proj-name">Billing Management System</div>
-        <p class="proj-body">Backend-driven billing platform supporting invoice generation, stock tracking, and customer management. Integrated APIs for financial data with robust accuracy and consistency.</p>
-        <div class="proj-stack">
-          <span class="proj-tag">Python</span>
-          <span class="proj-tag">Django</span>
-          <span class="proj-tag">DRF</span>
-          <span class="proj-tag">SQL</span>
-          <span class="proj-tag">REST APIs</span>
+      <!-- 02 — Matrimony -->
+      <div class="pcard reveal">
+        <div class="pcard-index">
+          <span class="pcard-index-num">02</span>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top">
+            <span class="pcard-badge live-badge">Live</span>
+            <span class="pcard-badge">Full Stack</span>
+            <span class="pcard-badge">Matrimony</span>
+          </div>
+          <div class="pcard-name">Srivaram Manamalai — Matrimony Platform</div>
+          <p class="pcard-desc">Complete matrimony web application serving a real community — featuring profile management, partner matching, search and filter workflows, and a responsive multi-page interface. Built with Django REST APIs, SQL, and Bootstrap for a polished, mobile-first experience.</p>
+          <div class="pcard-stack">
+            <span class="pcard-tag">Python</span>
+            <span class="pcard-tag">Django</span>
+            <span class="pcard-tag">DRF</span>
+            <span class="pcard-tag">SQL</span>
+            <span class="pcard-tag">HTML5</span>
+            <span class="pcard-tag">CSS3</span>
+            <span class="pcard-tag">Bootstrap</span>
+            <span class="pcard-tag">REST APIs</span>
+          </div>
+        </div>
+        <div class="pcard-actions">
+          <div class="pcard-icon"></div>
+          <div class="pcard-links">
+            <a href="https://srivarammanamalai.com" target="_blank" rel="noopener" class="plink live">
+              <span class="plink-icon">↗</span> srivarammanamalai.com
+            </a>
+            <a href="https://github.com/Bharath8992" target="_blank" rel="noopener" class="plink git">
+              <span class="plink-icon">⌥</span> GitHub
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="proj-card reveal">
-        <span class="proj-emoji">🤖</span>
-        <span class="proj-num">04</span>
-        <div class="proj-name">Custom LLM Experiment</div>
-        <p class="proj-body">Hands-on ML &amp; NLP exploration — custom LLM experiment covering model training workflows, data preprocessing pipelines, and AI-driven text analysis. Practical foundation in Generative AI.</p>
-        <div class="proj-stack">
-          <span class="proj-tag">Python</span>
-          <span class="proj-tag">Machine Learning</span>
-          <span class="proj-tag">NLP</span>
-          <span class="proj-tag">GenAI</span>
+      <!-- 03 — E-Commerce -->
+      <div class="pcard reveal">
+        <div class="pcard-index">
+          <span class="pcard-index-num">03</span>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top">
+            <span class="pcard-badge live-badge">Live</span>
+            <span class="pcard-badge">MERN Stack</span>
+            <span class="pcard-badge">E-Commerce</span>
+          </div>
+          <div class="pcard-name">E-Commerce Web Application</div>
+          <p class="pcard-desc">Complete e-commerce platform with secure backend APIs, product and inventory management system, responsive shopping interface, cart and checkout flows, and scalable architecture. Fully deployed on a VPS with domain configuration and SSL.</p>
+          <div class="pcard-stack">
+            <span class="pcard-tag">React.js</span>
+            <span class="pcard-tag">Node.js</span>
+            <span class="pcard-tag">Express.js</span>
+            <span class="pcard-tag">MongoDB</span>
+            <span class="pcard-tag">VPS</span>
+            <span class="pcard-tag">REST APIs</span>
+          </div>
+        </div>
+        <div class="pcard-actions">
+          <div class="pcard-icon"></div>
+          <div class="pcard-links">
+            <a href="https://3dotworld.in" target="_blank" rel="noopener" class="plink live">
+              <span class="plink-icon">↗</span> 3dotworld.in
+            </a>
+            <a href="https://github.com/Bharath8992" target="_blank" rel="noopener" class="plink git">
+              <span class="plink-icon">⌥</span> GitHub
+            </a>
+          </div>
         </div>
       </div>
+
+      <!-- 04 — Billing -->
+      <div class="pcard reveal">
+        <div class="pcard-index">
+          <span class="pcard-index-num">04</span>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top">
+            <span class="pcard-badge live-badge">Live</span>
+            <span class="pcard-badge">Backend</span>
+            <span class="pcard-badge">Business Tool</span>
+          </div>
+          <div class="pcard-name">Billing Management System</div>
+          <p class="pcard-desc">Backend-driven business billing platform supporting invoice generation, stock tracking, and customer management. REST API-integrated financial data layer with high accuracy, consistency validation, and audit-ready reporting for business operations.</p>
+          <div class="pcard-stack">
+            <span class="pcard-tag">Python</span>
+            <span class="pcard-tag">Django</span>
+            <span class="pcard-tag">DRF</span>
+            <span class="pcard-tag">SQL</span>
+            <span class="pcard-tag">REST APIs</span>
+          </div>
+        </div>
+        <div class="pcard-actions">
+          <div class="pcard-icon"></div>
+          <div class="pcard-links">
+            <a href="https://curatherapycentre.com/" target="_blank" rel="noopener" class="plink live">
+              <span class="plink-icon">↗</span> Cura Therapy Centre
+            </a>
+            <a href="https://github.com/Bharath8992" target="_blank" rel="noopener" class="plink git">
+              <span class="plink-icon">⌥</span> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 — LLM -->
+      <div class="pcard reveal">
+        <div class="pcard-index">
+          <span class="pcard-index-num">05</span>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top">
+            <span class="pcard-badge">AI / ML</span>
+            <span class="pcard-badge">Research</span>
+          </div>
+          <div class="pcard-name">Custom LLM Experiment</div>
+          <p class="pcard-desc">Hands-on ML and NLP exploration — custom large language model experiment covering data preprocessing pipelines, model training workflows, tokenisation, and AI-driven text analysis. Demonstrates a practical and growing foundation in Generative AI engineering.</p>
+          <div class="pcard-stack">
+            <span class="pcard-tag">Python</span>
+            <span class="pcard-tag">Machine Learning</span>
+            <span class="pcard-tag">NLP</span>
+            <span class="pcard-tag">Generative AI</span>
+            <span class="pcard-tag">Data Preprocessing</span>
+          </div>
+        </div>
+        <div class="pcard-actions">
+          <div class="pcard-icon"></div>
+          <div class="pcard-links">
+            <a href="https://github.com/Bharath8992" target="_blank" rel="noopener" class="plink git">
+              <span class="plink-icon">⌥</span> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="live-sites reveal">
-      <span class="live-label">Live Deployments →</span>
-      <div class="live-links">
-        <a href="https://physioabroad.org" target="_blank" rel="noopener" class="live-link">physioabroad.org ↗</a>
-        <a href="https://handsonwashington.com" target="_blank" rel="noopener" class="live-link">handsonwashington.com ↗</a>
-        <a href="https://aniaaz.mckbytes.in" target="_blank" rel="noopener" class="live-link">aniaaz.mckbytes.in ↗</a>
-        <a href="https://srivarammanamalai.com" target="_blank" rel="noopener" class="live-link">srivarammanamalai.com ↗</a>
-        <a href="https://3dotworld.in" target="_blank" rel="noopener" class="live-link">3dotworld.in ↗</a>
+    <!-- Other live sites strip -->
+    <div style="max-width:1200px; margin: 1.5px auto 0; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 1.75rem 2.5rem; display:flex; align-items:center; gap:2rem; flex-wrap:wrap;" class="reveal">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; color:rgba(200,150,62,0.55); white-space:nowrap; text-transform:uppercase;">Other Deployments →</span>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+        <a href="https://physioabroad.org" target="_blank" rel="noopener" class="plink git" style="width:auto;">physioabroad.org ↗</a>
+        <a href="https://handsonwashington.com" target="_blank" rel="noopener" class="plink git" style="width:auto;">handsonwashington.com ↗</a>
       </div>
     </div>
   </section>
@@ -1467,7 +1680,7 @@
         <div class="info-grid">
           <div class="info-block">
             <div class="info-block-label">Target CTC</div>
-            <div class="info-block-val">10–15 LPA</div>
+            <div class="info-block-val">As per industry standards</div>
           </div>
           <div class="info-block">
             <div class="info-block-label">Availability</div>
