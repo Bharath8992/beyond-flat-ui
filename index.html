@@ -1,857 +1,1606 @@
 <!DOCTYPE html>
-<html lang="en" class="notranslate" translate="no">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bharath A | Python Developer & Full Stack Engineer</title>
-  <meta name="description" content="Results-driven Python Developer and Full Stack Engineer with 2+ years of experience designing, developing, and maintaining scalable web applications and backend systems." />
-  <meta name="theme-color" content="#050505" />
-  <meta name="color-scheme" content="dark" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="google" content="notranslate" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bharath A - Python & Full Stack Developer" />
-  <meta name="twitter:description" content="Results-driven Python Developer and Full Stack Engineer building scalable web applications." />
-  <meta name="twitter:image" content="../assets/img/og-cover.webp" />
-  <link rel="canonical" id="canonical-link" href="/" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Bharath A - Python & Full Stack Developer" />
-  <meta property="og:description" content="Results-driven Python Developer and Full Stack Engineer building scalable web applications." />
-  <meta property="og:image" content="../assets/img/og-cover.webp" />
-  <meta property="og:url" id="og-url" content="/" />
-  <meta property="og:locale" content="en_US" />
-
-  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
-  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png" />
-  <link rel="manifest" href="../assets/img/site.webmanifest" crossorigin="use-credentials" />
+  <title>Bharath A — Python & AI Engineer</title>
+  <meta name="description" content="Python Developer & Full Stack Engineer with 2+ years building scalable AI-ready backend systems and web applications." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;500;700&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- Critical asset preloads -->
-  <link rel="preload" as="image" href="../assets/img/og-cover.webp" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-  <link rel="stylesheet" href="style.css"/>
+    :root {
+      --cream: #f5f0e8;
+      --warm-white: #faf8f4;
+      --ink: #0e0c09;
+      --ink-soft: #2a2620;
+      --muted: #8a8070;
+      --muted-light: #b8b0a0;
+      --gold: #c8963e;
+      --gold-light: #e8b860;
+      --gold-pale: rgba(200,150,62,0.1);
+      --teal: #2a7a6f;
+      --border: rgba(14,12,9,0.1);
+      --border-gold: rgba(200,150,62,0.25);
 
-  <!-- Nuclear click-fix: MUST load before other scripts -->
-  <script src="click-fix.js"></script>
+      /* surfaces */
+      --bg: #faf8f4;
+      --bg-alt: #f5f0e8;
+      --bg-inv: #0e0c09;
+      --bg-inv-soft: #1a1714;
+      --card: #ffffff;
+      --card-dark: #2a2620;
 
-  <!-- Google Tag Manager -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Bharath A",
-      "url": "/",
-      "jobTitle": "Python Developer | Full Stack Developer",
-      "email": "ajiabharath@gmail.com",
-      "telephone": "+91-6379573737",
-      "description": "Results-driven Python Developer and Full Stack Engineer with 2+ years of experience.",
-      "areaServed": "Worldwide"
+      /* transition speed for theme switch */
+      --t: 0.55s;
     }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What technologies does Bharath work with?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Bharath works with Python, Django, Django REST Framework, JavaScript, React.js, Node.js, Express.js, SQL, MongoDB, and more."}
-        },
-        {
-          "@type": "Question",
-          "name": "How much experience does Bharath have?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Bharath has 2+ years of professional experience building scalable web applications, REST APIs, and backend systems."}
-        },
-        {
-          "@type": "Question",
-          "name": "Is Bharath available for remote work?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Yes. Bharath is open to both remote and on-site opportunities across India and globally."}
-        },
-        {
-          "@type": "Question",
-          "name": "What kind of projects has Bharath built?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Bharath has built real estate platforms, e-commerce applications, billing management systems, and has explored custom LLM experiments."}
-        },
-        {
-          "@type": "Question",
-          "name": "What is Bharath's educational background?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Bharath holds a B.Tech in Computer Science and Engineering from SRM Institute of Science and Technology (2020–2024)."}
-        }
-      ]
+
+    /* ── DARK THEME ── */
+    html.dark {
+      --cream: #1a1714;
+      --warm-white: #111009;
+      --ink: #f0ede6;
+      --ink-soft: #d4cfc5;
+      --muted: #7a7060;
+      --muted-light: #5a5248;
+      --gold: #e8b060;
+      --gold-light: #f0c878;
+      --gold-pale: rgba(232,176,96,0.1);
+      --teal: #3ab89e;
+      --border: rgba(240,237,230,0.08);
+      --border-gold: rgba(232,176,96,0.2);
+      --bg: #111009;
+      --bg-alt: #1a1714;
+      --bg-inv: #f0ede6;
+      --bg-inv-soft: #d4cfc5;
+      --card: #1e1c18;
+      --card-dark: #0d0c09;
     }
-  </script>
-  <script>
-    (function(){
-      var o = window.location.origin;
-      var full = o + window.location.pathname;
-      var canonical = document.getElementById('canonical-link');
-      var ogUrl = document.getElementById('og-url');
-      if (canonical) canonical.setAttribute('href', full);
-      if (ogUrl) ogUrl.setAttribute('content', full);
-      document.querySelectorAll('meta[property="og:image"],meta[name="twitter:image"]').forEach(function(m){
-        var c = m.getAttribute('content');
-        if (c && c.indexOf('http') !== 0) m.setAttribute('content', o + '/' + c.replace(/^\//,''));
-      });
-      document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
-        var t = s.textContent;
-        if (t.indexOf('"url": "/"') > -1) t = t.replace('"url": "/"', '"url": "' + full + '"');
-        if (t.indexOf('"logo":') > -1) t = t.replace(/"logo":\s*"(?!http)([^"]+)"/, '"logo": "' + o + '/$1"');
-        s.textContent = t;
-      });
-    })();
-  </script>
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--warm-white);
+      color: var(--ink);
+      overflow-x: hidden;
+      cursor: none;
+      transition: background var(--t) ease, color var(--t) ease;
+    }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      position: fixed;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      z-index: 8000;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: none;
+      cursor: none;
+      background: var(--ink);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18), 0 0 0 1px var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: background 0.5s ease, box-shadow 0.5s ease, transform 0.3s ease;
+    }
+    .theme-toggle:hover { transform: scale(1.1); }
+    .theme-toggle:active { transform: scale(0.95); }
+
+    .theme-toggle .ripple {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: var(--gold);
+      transform: scale(0);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .theme-toggle.burst .ripple {
+      animation: burst-ring 0.55s ease-out forwards;
+    }
+    @keyframes burst-ring {
+      0%  { transform: scale(0); opacity: 0.6; }
+      100%{ transform: scale(2.5); opacity: 0; }
+    }
+
+    .toggle-icon {
+      position: relative;
+      width: 22px;
+      height: 22px;
+    }
+    .icon-moon {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .icon-moon svg { fill: var(--gold); width: 18px; height: 18px; }
+    .icon-sun {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0;
+      transform: rotate(90deg) scale(0.6);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .icon-sun svg { fill: #fcd34d; width: 20px; height: 20px; }
+
+    html.dark .icon-moon { opacity: 0; transform: rotate(-90deg) scale(0.6); }
+    html.dark .icon-sun  { opacity: 1; transform: rotate(0deg) scale(1); }
+    html.dark .theme-toggle { background: #1e1c16; }
+    html.dark .icon-sun svg { animation: spin-slow 12s linear infinite; }
+    @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+    .toggle-particles { position: absolute; inset: 0; border-radius: 50%; pointer-events: none; }
+    .particle {
+      position: absolute;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--gold-light);
+      opacity: 0;
+    }
+    .theme-toggle.burst .particle { animation: particle-fly 0.6s ease-out forwards; }
+    .particle:nth-child(1) { top:50%; left:50%; --px:-28px; --py:-28px; }
+    .particle:nth-child(2) { top:50%; left:50%; --px:28px;  --py:-24px; animation-delay:0.04s; }
+    .particle:nth-child(3) { top:50%; left:50%; --px:30px;  --py:20px;  animation-delay:0.08s; }
+    .particle:nth-child(4) { top:50%; left:50%; --px:-24px; --py:26px;  animation-delay:0.02s; }
+    .particle:nth-child(5) { top:50%; left:50%; --px:0px;   --py:-32px; animation-delay:0.06s; }
+    .particle:nth-child(6) { top:50%; left:50%; --px:-32px; --py:0px;   animation-delay:0.03s; }
+    @keyframes particle-fly {
+      0%   { transform:translate(-50%,-50%) scale(1); opacity:0.9; }
+      100% { transform:translate(calc(-50% + var(--px)), calc(-50% + var(--py))) scale(0); opacity:0; }
+    }
+
+    /* Global theme transition */
+    html { transition: background 0.5s ease; }
+    nav, section, footer, .hero-right, .skills-section, .about-section,
+    .experience-section, .projects-section, .contact-section,
+    .bento-card, .skill-card, .exp-card, .proj-card, .info-block,
+    .hero-stat, .about-card, .contact-email-block, .live-sites,
+    .s-pill, .open-pill, .detail-row, .nav-cta, .btn-primary, .btn-outline {
+      transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease !important;
+    }
+
+    html.dark nav { background: rgba(17,16,9,0.9) !important; border-bottom-color: rgba(240,237,230,0.06); }
+    html.dark .hero-right { background: #161410; }
+    html.dark .hero-stat { background: rgba(255,255,255,0.03); }
+    html.dark .skills-section { background: #161410 !important; }
+    html.dark .skill-card { background: #1a1814; }
+    html.dark .skill-card:hover { background: #201e18; }
+    html.dark .contact-section { background: #111009 !important; }
+    html.dark .info-block { background: #1a1714; }
+    html.dark .contact-email-block { background: rgba(232,176,96,0.06); }
+    html.dark footer { background: #080706 !important; }
+    html.dark .cursor { mix-blend-mode: screen; }
+
+    /* ── CUSTOM CURSOR ── */
+    .cursor {
+      width: 10px; height: 10px;
+      background: var(--gold);
+      border-radius: 50%;
+      position: fixed; top: 0; left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%,-50%);
+      transition: transform 0.1s, width 0.3s, height 0.3s, opacity 0.3s;
+      mix-blend-mode: multiply;
+    }
+    .cursor-ring {
+      width: 36px; height: 36px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      position: fixed; top: 0; left: 0;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%,-50%);
+      transition: transform 0.18s ease, width 0.3s, height 0.3s, opacity 0.3s;
+      opacity: 0.5;
+    }
+    body:hover .cursor { opacity: 1; }
+
+    /* ── SCROLL PROGRESS ── */
+    .progress-bar {
+      position: fixed; top: 0; left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      z-index: 9000;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 800;
+      padding: 1.5rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(250,248,244,0.85);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.1rem;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 0.55rem 1.4rem;
+      border: 1px solid var(--ink);
+      border-radius: 2px;
+      transition: all 0.25s;
+    }
+    .nav-cta:hover { background: var(--ink); color: var(--warm-white); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-left {
+      padding: 9rem 4rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid var(--border);
+      position: relative;
+    }
+    .hero-right {
+      padding: 9rem 4rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: var(--cream);
+      position: relative;
+    }
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 60% 30%, rgba(200,150,62,0.08) 0%, transparent 70%);
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      margin-bottom: 3rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px; height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-name {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(4rem, 7vw, 6.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 340px;
+      margin-top: 2.5rem;
+    }
+    .hero-tagline strong { color: var(--ink); font-weight: 500; }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--warm-white);
+      background: var(--ink);
+      padding: 0.85rem 2rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.25s;
+      border: 1px solid var(--ink);
+    }
+    .btn-primary:hover { background: var(--ink-soft); }
+    .btn-outline {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: transparent;
+      padding: 0.85rem 2rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.25s;
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--ink); }
+
+    /* Right side of hero */
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-bottom: 3rem;
+    }
+    .hero-stat {
+      padding: 2rem;
+      background: rgba(255,255,255,0.6);
+      border: 1px solid var(--border-gold);
+    }
+    .hero-stat-num {
+      font-family: 'Instrument Serif', serif;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--ink);
+      display: block;
+    }
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 0.5rem;
+      display: block;
+    }
+
+    .hero-role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1.2rem;
+      border: 1px solid var(--border-gold);
+      background: rgba(200,150,62,0.06);
+      border-radius: 2px;
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      margin-bottom: 1.5rem;
+    }
+    .status-dot {
+      width: 7px; height: 7px;
+      background: #2a9d72;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(42,157,114,0.2);
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(42,157,114,0.2); }
+      50% { box-shadow: 0 0 0 6px rgba(42,157,114,0.1); }
+    }
+
+    .hero-scroll-hint {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.72rem;
+      color: var(--muted-light);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: auto;
+    }
+    .scroll-line {
+      width: 40px; height: 1px;
+      background: var(--muted-light);
+      position: relative;
+      overflow: hidden;
+    }
+    .scroll-line::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: var(--gold);
+      animation: slide-line 2s ease-in-out infinite;
+    }
+    @keyframes slide-line {
+      0% { left: -100%; }
+      50% { left: 100%; }
+      100% { left: 100%; }
+    }
+
+    /* ── SECTION SHARED ── */
+    section { position: relative; }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 18px; height: 1px;
+      background: var(--gold);
+    }
+    .section-heading {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    .section-heading em { font-style: italic; color: var(--gold); }
+
+    /* ── ABOUT ── */
+    .about-section {
+      padding: 8rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+      border-top: 1px solid var(--border);
+    }
+    .about-left { position: sticky; top: 8rem; }
+    .about-body {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+    .about-body strong { color: var(--ink); font-weight: 500; }
+    .about-details {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .detail-row:first-child { border-top: 1px solid var(--border); }
+    .detail-key { color: var(--muted); font-weight: 300; }
+    .detail-val { color: var(--ink); font-weight: 500; }
+    .detail-val.green { color: var(--teal); }
+    .detail-val a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--border); transition: border-color 0.2s; }
+    .detail-val a:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Skill pills */
+    .skill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 2.5rem;
+    }
+    .s-pill {
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--ink-soft);
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: all 0.25s;
+      cursor: default;
+    }
+    .s-pill:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: var(--gold-pale);
+    }
+
+    /* ── SKILLS ── */
+    .skills-section {
+      padding: 8rem 4rem;
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+    .skills-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: 5rem;
+    }
+    .skills-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+    }
+    .skill-card {
+      background: var(--warm-white);
+      padding: 2.5rem 2rem;
+      transition: background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .skill-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .skill-card:hover { background: #fff; }
+    .skill-card:hover::after { transform: scaleX(1); }
+    .skill-card.span2 { grid-column: span 2; }
+    .skill-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+    .skill-name {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.35rem;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+    .skill-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 1.2rem;
+    }
+    .skill-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      background: rgba(14,12,9,0.04);
+      padding: 0.25rem 0.55rem;
+      border-radius: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── EXPERIENCE ── */
+    .experience-section {
+      padding: 8rem 4rem;
+      border-top: 1px solid var(--border);
+    }
+    .exp-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: 5rem;
+    }
+    .exp-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .exp-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      padding: 3rem 0;
+      border-top: 1px solid var(--border);
+      position: relative;
+      transition: all 0.3s;
+    }
+    .exp-item:last-child { border-bottom: 1px solid var(--border); }
+    .exp-item::before {
+      content: '';
+      position: absolute;
+      left: 196px;
+      top: 0; bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .exp-meta { padding-right: 3rem; }
+    .exp-period {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .exp-company {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+    .exp-role {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+    .exp-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .exp-points li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.65;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .exp-points li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 0.8rem;
+    }
+
+    /* ── PROJECTS ── */
+    .projects-section {
+      padding: 8rem 4rem;
+      background: var(--ink);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .projects-section .section-label { color: var(--gold-light); }
+    .projects-section .section-label::before { background: var(--gold-light); }
+    .projects-section .section-heading { color: var(--warm-white); }
+    .proj-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: 5rem;
+    }
+    .proj-desc {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5px;
+      background: rgba(255,255,255,0.06);
+    }
+    .proj-card {
+      background: var(--ink-soft);
+      padding: 2.5rem;
+      transition: background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .proj-card:hover { background: #1e1c18; }
+    .proj-card.featured {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .proj-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: rgba(200,150,62,0.5);
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .proj-name {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.45rem;
+      color: var(--warm-white);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+    .proj-body {
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    .proj-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .proj-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--gold-light);
+      background: rgba(200,150,62,0.08);
+      border: 1px solid rgba(200,150,62,0.2);
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+      letter-spacing: 0.03em;
+    }
+    .proj-emoji {
+      font-size: 3.5rem;
+      display: block;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    /* Featured project visual */
+    .proj-visual {
+      height: 200px;
+      border: 1px solid rgba(200,150,62,0.15);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* Live sites */
+    .live-sites {
+      margin-top: 1.5px;
+      background: rgba(255,255,255,0.02);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .live-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: rgba(200,150,62,0.6);
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+    .live-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .live-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      padding: 0.35rem 0.8rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .live-link:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      padding: 8rem 4rem;
+      border-top: 1px solid var(--border);
+      background: var(--warm-white);
+    }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8rem;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .contact-big {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+    .contact-big em { font-style: italic; color: var(--gold); }
+    .contact-note {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 3rem;
+    }
+    .contact-email-block {
+      padding: 2rem;
+      border: 1px solid var(--border-gold);
+      background: var(--gold-pale);
+      border-radius: 2px;
+      margin-bottom: 2rem;
+    }
+    .contact-email-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .contact-email-addr {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.5rem;
+      color: var(--ink);
+      text-decoration: none;
+      display: block;
+      transition: color 0.2s;
+    }
+    .contact-email-addr:hover { color: var(--gold); }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .contact-link-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+    .contact-link-row:first-child { border-top: 1px solid var(--border); }
+    .contact-link-row:hover { color: var(--ink); }
+    .contact-link-label { font-weight: 300; }
+    .contact-link-val { font-weight: 500; color: var(--ink); }
+    .contact-link-arrow { color: var(--gold); font-size: 0.9rem; }
+
+    .open-badges {
+      margin-top: 2.5rem;
+    }
+    .open-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: var(--muted-light);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .open-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .open-pill {
+      font-size: 0.78rem;
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--ink-soft);
+    }
+
+    /* Contact right — decorative grid */
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5px;
+    }
+    .info-block {
+      padding: 2rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .info-block-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted-light);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .info-block-val {
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 3rem 4rem;
+      border-top: 1px solid var(--border);
+      background: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-brand {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.05rem;
+      color: var(--cream);
+      letter-spacing: -0.01em;
+    }
+    .footer-nav {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-nav a {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    /* ── REVEAL ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* Hero on-load animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: none; }
+    }
+    .animate-in { animation: fadeUp 0.8s ease forwards; }
+    .animate-in-d1 { animation: fadeUp 0.8s 0.15s ease both; }
+    .animate-in-d2 { animation: fadeUp 0.8s 0.3s ease both; }
+    .animate-in-d3 { animation: fadeUp 0.8s 0.45s ease both; }
+    .animate-in-d4 { animation: fadeUp 0.8s 0.6s ease both; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1.5rem 2rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 7rem 2rem 3rem; border-right: none; border-bottom: 1px solid var(--border); }
+      .hero-right { padding: 3rem 2rem 4rem; }
+      .about-section { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 2rem; }
+      .about-left { position: static; }
+      .skills-section { padding: 5rem 2rem; }
+      .skills-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skill-card.span2 { grid-column: span 1; }
+      .experience-section { padding: 5rem 2rem; }
+      .exp-header { grid-template-columns: 1fr; gap: 2rem; }
+      .exp-item { grid-template-columns: 1fr; gap: 1rem; }
+      .exp-item::before { display: none; }
+      .exp-meta { padding-right: 0; }
+      .projects-section { padding: 5rem 2rem; }
+      .proj-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .proj-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+      .contact-section { padding: 5rem 2rem; }
+      .contact-inner { grid-template-columns: 1fr; gap: 4rem; }
+      footer { padding: 2rem; flex-direction: column; align-items: flex-start; }
+      .footer-nav { flex-wrap: wrap; gap: 1rem; }
+    }
+  </style>
 </head>
-
 <body>
-  <!-- Skip navigation -->
-  <a href="#inicio" class="skip-nav">Skip to content</a>
-
-  <!-- Page transition -->
-  <div class="page-transition" id="page-transition">
-    <div class="pt-slice"></div>
-    <div class="pt-slice"></div>
-    <div class="pt-slice"></div>
-    <div class="pt-slice"></div>
-    <div class="pt-slice"></div>
-  </div>
-
-  <!-- No-JS fallback -->
-  <noscript><style>.gmx-loader,.page-transition,.noise-overlay{display:none!important}.hero-anim,.reveal-up{opacity:1!important;transform:none!important}</style></noscript>
-
-  <!-- Loader Premium -->
-  <div class="gmx-loader" aria-hidden="true">
-    <div class="loader-text">CODE. BUILD. DEPLOY.</div>
-    <div class="loader-counter">0%</div>
-    <div class="loader-bar"><div class="loader-bar-fill" id="loader-bar-fill"></div></div>
-  </div>
-
-  <!-- FX overlays -->
-  <div class="noise-overlay" aria-hidden="true"></div>
-
-  <!-- Video BG (lazy loaded) -->
-  <div class="video-bg-container" aria-hidden="true">
-    <video autoplay loop muted playsinline class="bg-video" id="bg-video-lazy">
-    </video>
-    <div class="dark-overlay"></div>
-  </div>
-
-  <!-- HERO WebGL -->
-  <div class="webgl-universe" id="hero-universe" aria-hidden="true">
-    <canvas id="hero-canvas">Bharath A 3D star universe</canvas>
-  </div>
-
-  <!-- Header -->
-  <header class="gmx-header">
-    <div class="gmx-logo reveal-up">
-      <span style="font-family:'Syncopate',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:0.15em;">BHARATH.DEV</span>
-    </div>
-    <nav class="header-nav reveal-up" aria-label="Navigation">
-      <a href="#aplicacao" class="gmx-btn-nav scroll-link header-desktop-only" style="text-decoration:none;">HIRE ME</a>
-      <a href="mailto:ajiabharath@gmail.com" class="gmx-btn-nav header-desktop-only" style="text-decoration:none;">CONTACT</a>
-    </nav>
-    <!-- Mobile hamburger -->
-    <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-  </header>
-
-  <!-- Mobile Nav Overlay -->
-  <nav class="mobile-nav-overlay" id="mobile-nav" aria-label="Mobile menu">
-    <a href="#inicio" class="mobile-nav-link scroll-link">HOME</a>
-    <a href="#sobre" class="mobile-nav-link scroll-link">ABOUT</a>
-    <a href="#servicos" class="mobile-nav-link scroll-link">SKILLS</a>
-    <a href="#metodo" class="mobile-nav-link scroll-link">EXPERIENCE</a>
-    <a href="#portfolio" class="mobile-nav-link scroll-link">PROJECTS</a>
-    <a href="#aplicacao" class="mobile-nav-link scroll-link">HIRE ME</a>
-    <a href="mailto:ajiabharath@gmail.com" class="mobile-nav-link wa-link">EMAIL ME</a>
-  </nav>
-
-  <main class="scroll-container">
-    <!-- HERO -->
-    <section class="hero pure-hero" id="inicio">
-      <div class="hero-content">
-        <h1 class="hero-title hero-anim" aria-label="I Engineer Solutions.">
-          <span class="glitch-target" data-original="I ENGINEER">I ENGINEER</span><br />
-          <span class="gmx-highlight glitch-target" data-original="SOLUTIONS.">SOLUTIONS.</span>
-        </h1>
-        <p class="subtitle hero-anim">Python Developer. Full Stack Engineer. Application Development Specialist.</p>
-      </div>
-      <div class="hero-scroll-indicator" id="hero-scroll-ind">
-        <span class="scroll-label">SCROLL</span>
-        <div class="scroll-line"></div>
-        <div class="scroll-dot"></div>
-      </div>
-    </section>
-
-    <!-- SHOWREEL — repurposed as intro card -->
-    <section class="showreel-section">
-      <div class="showreel-glass-frame reveal-up tilt-effect" role="presentation" tabindex="0" aria-label="Developer intro">
-        <div class="showreel-container">
-          <div class="showreel-overlay"></div>
-          <div class="showreel-hud">
-            <span class="hud-label">AVAILABLE FOR HIRE — 2025</span>
-            <span class="hud-time">OPEN</span>
-          </div>
-          <div class="play-reel-btn">
-            <span class="play-text glitch-target" data-original="FULL">FULL</span>
-            <div class="play-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
-            </div>
-            <span class="play-text glitch-target" data-original="STACK">STACK</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MARQUEE TICKER -->
-    <div class="gmx-marquee" aria-hidden="true">
-      <div class="gmx-marquee-inner">
-        <span class="gmx-marquee-item">PYTHON DEVELOPER <span class="dot"></span></span>
-        <span class="gmx-marquee-item">DJANGO REST FRAMEWORK <span class="dot"></span></span>
-        <span class="gmx-marquee-item">FULL STACK ENGINEER <span class="dot"></span></span>
-        <span class="gmx-marquee-item">REACT.JS &amp; NODE.JS <span class="dot"></span></span>
-        <span class="gmx-marquee-item">SCALABLE BACKEND SYSTEMS <span class="dot"></span></span>
-        <span class="gmx-marquee-item">REST API DEVELOPMENT <span class="dot"></span></span>
-        <span class="gmx-marquee-item">PYTHON DEVELOPER <span class="dot"></span></span>
-        <span class="gmx-marquee-item">DJANGO REST FRAMEWORK <span class="dot"></span></span>
-        <span class="gmx-marquee-item">FULL STACK ENGINEER <span class="dot"></span></span>
-        <span class="gmx-marquee-item">REACT.JS &amp; NODE.JS <span class="dot"></span></span>
-        <span class="gmx-marquee-item">SCALABLE BACKEND SYSTEMS <span class="dot"></span></span>
-        <span class="gmx-marquee-item">REST API DEVELOPMENT <span class="dot"></span></span>
-      </div>
-    </div>
-
-    <!-- ABOUT -->
-    <section class="about-gmx" id="sobre">
-      <span class="about-number" aria-hidden="true">01</span>
-      <div class="about-left" id="cube-hitbox">
-        <div id="cube-container"></div>
-      </div>
-      <div class="about-right">
-        <div class="premium-text-card">
-          <span class="about-tag">ABOUT ME</span>
-          <h2 class="section-title">Bharath A —<br>Full Stack Developer</h2>
-          <div class="about-divider"></div>
-          <p class="section-desc">Python Developer & Full Stack Engineer based in Chennai, India.</p>
-          <p class="big-text">Results-driven engineer with 2+ years of experience designing, developing, and maintaining scalable web applications and backend systems. I turn complex business requirements into clean, efficient, and production-ready software — built for performance and reliability.</p>
-          <div class="about-capabilities">
-            <span class="capability-pill">Python</span>
-            <span class="capability-pill">Django</span>
-            <span class="capability-pill">React.js</span>
-            <span class="capability-pill">Node.js</span>
-            <span class="capability-pill">REST APIs</span>
-            <span class="capability-pill">SQL &amp; MongoDB</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Immersive 3D overlay -->
-    <div id="immersive-3d-overlay" aria-hidden="true"></div>
-
-    <!-- LIGHT REALM -->
-    <div class="light-realm">
-      <div class="light-content">
-        <!-- SKILLS / SERVICES -->
-        <section class="services-grid-section" id="servicos">
-          <div class="premium-title-wrapper reveal-up">
-            <span class="light-section-tag">SKILLS</span>
-            <h2 class="section-title" style="color:#111;">Technical<br>Expertise</h2>
-            <p class="section-desc" style="color:#666;">Full-stack capabilities from backend APIs to production deployments.</p>
-          </div>
-          <div class="bento-grid">
-            <div class="bento-card featured reveal-up" role="presentation" tabindex="0">
-              <div class="bento-header">
-                <span class="bento-tag">BACKEND • PYTHON • DJANGO</span>
-                <div class="open-icon" aria-hidden="true">+</div>
-              </div>
-              <h3 class="bento-title">Backend Development</h3>
-              <p class="bento-desc">Python, Django, Django REST Framework, Node.js, Express.js — building secure and scalable server-side systems.</p>
-            </div>
-            <div class="bento-card reveal-up" role="presentation" tabindex="0">
-              <div class="bento-header">
-                <span class="bento-tag">FRONTEND • REACT • JAVASCRIPT</span>
-                <div class="open-icon" aria-hidden="true">+</div>
-              </div>
-              <h3 class="bento-title">Frontend Engineering</h3>
-              <p class="bento-desc">React.js, JavaScript, HTML, CSS — building responsive, user-friendly interfaces that perform.</p>
-            </div>
-            <div class="bento-card reveal-up" role="presentation" tabindex="0">
-              <div class="bento-header">
-                <span class="bento-tag">API DESIGN • REST • AUTH</span>
-                <div class="open-icon" aria-hidden="true">+</div>
-              </div>
-              <h3 class="bento-title">REST API Development</h3>
-              <p class="bento-desc">RESTful API design, JWT &amp; OAuth authentication, microservices architecture, and client-server application design.</p>
-            </div>
-            <div class="bento-card reveal-up" role="presentation" tabindex="0">
-              <div class="bento-header">
-                <span class="bento-tag">SQL • MONGODB • OPTIMIZATION</span>
-                <div class="open-icon" aria-hidden="true">+</div>
-              </div>
-              <h3 class="bento-title">Database Management</h3>
-              <p class="bento-desc">SQL and MongoDB — database design, query optimization, and data processing for production-grade applications.</p>
-            </div>
-            <div class="bento-card reveal-up" style="grid-column:span 2;" role="presentation" tabindex="0">
-              <div class="bento-header">
-                <span class="bento-tag">GIT • CI/CD • VPS • JENKINS</span>
-                <div class="open-icon" aria-hidden="true">+</div>
-              </div>
-              <h3 class="bento-title">DevOps &amp; Deployment</h3>
-              <p class="bento-desc">Git, GitHub, Bitbucket, Jenkins, CI/CD pipelines, and VPS deployment — delivering reliable, version-controlled production systems.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- EXPERIENCE / METHOD -->
-        <section class="method-section" id="metodo">
-          <div class="premium-title-wrapper reveal-up">
-            <span class="light-section-tag">EXPERIENCE</span>
-            <h2 class="section-title" style="color:#111;">Work History</h2>
-            <p class="section-desc" style="color:#666;">2+ years building real-world applications in Agile environments.</p>
-          </div>
-          <div class="method-grid">
-            <div class="step-card reveal-up">
-              <div class="step-number">01</div>
-              <h4>Full Stack Developer</h4>
-              <p><strong>Mckbytes Technologies, Vellore</strong><br>Jul 2025 – Present<br><br>Building and maintaining a real estate management platform using Django, JavaScript, and SQL. Developing REST APIs, admin dashboards, and scalable database schemas.</p>
-            </div>
-            <div class="step-card reveal-up">
-              <div class="step-number">02</div>
-              <h4>Junior Software Engineer</h4>
-              <p><strong>DX Enablers Pvt. Ltd., Vellore (Remote)</strong><br>Feb 2024 – Apr 2025<br><br>Implemented JWT &amp; OAuth authentication, participated in Agile sprint cycles, performed debugging &amp; performance optimization, and delivered application features.</p>
-            </div>
-            <div class="step-card reveal-up">
-              <div class="step-number">03</div>
-              <h4>Education</h4>
-              <p><strong>SRM Institute of Science &amp; Technology</strong><br>B.Tech — Computer Science &amp; Engineering<br>2020 – 2024</p>
-            </div>
-            <div class="step-card reveal-up">
-              <div class="step-number">04</div>
-              <h4>Certifications</h4>
-              <p><strong>Python</strong> — Livewire<br><strong>MySQL for Developers</strong> — Geekster<br><br>Continuously upskilling in ML, NLP, and Generative AI concepts.</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <!-- HYPER REALITY STRIP -->
-    <div class="hyper-strip" aria-hidden="true">
-      <div class="hyper-strip-inner">
-        <span class="hyper-strip-item">PYTHON <span class="dot"></span></span>
-        <span class="hyper-strip-item">DJANGO <span class="dot"></span></span>
-        <span class="hyper-strip-item">REACT.JS <span class="dot"></span></span>
-        <span class="hyper-strip-item">NODE.JS <span class="dot"></span></span>
-        <span class="hyper-strip-item">REST APIs <span class="dot"></span></span>
-        <span class="hyper-strip-item">SQL &amp; MONGODB <span class="dot"></span></span>
-        <span class="hyper-strip-item">PYTHON <span class="dot"></span></span>
-        <span class="hyper-strip-item">DJANGO <span class="dot"></span></span>
-        <span class="hyper-strip-item">REACT.JS <span class="dot"></span></span>
-        <span class="hyper-strip-item">NODE.JS <span class="dot"></span></span>
-        <span class="hyper-strip-item">REST APIs <span class="dot"></span></span>
-        <span class="hyper-strip-item">SQL &amp; MONGODB <span class="dot"></span></span>
-      </div>
-    </div>
-
-    <!-- PORTFOLIO / PROJECTS -->
-    <div class="portfolio-light-wrapper" id="portfolio">
-      <div class="portfolio-header reveal-up">
-        <span class="light-section-tag">PROJECTS</span>
-        <h2 class="portfolio-heading">Production-grade applications built from scratch</h2>
-        <p class="portfolio-drag-hint">drag to explore →</p>
-      </div>
-      <section class="portfolio portfolio-drag" id="portfolio-drag">
-        <div class="showreel-glass-frame reveal-up tilt-effect" role="presentation" tabindex="0">
-          <div class="work-item">
-            <div class="work-bg-parallax" role="img" aria-label="Real Estate Web Application" style="background:linear-gradient(135deg,#1a1a2e,#16213e);"></div>
-            <div class="work-content">
-              <h2 class="work-title skew-on-scroll">Real Estate Platform</h2>
-              <p class="work-desc">Full-stack property management system — Django, DRF, JavaScript, SQL. REST APIs, user auth, CRUD &amp; admin dashboards.</p>
-              <div class="gmx-btn">VIEW PROJECT</div>
-            </div>
-          </div>
-        </div>
-        <div class="showreel-glass-frame reveal-up tilt-effect" role="presentation" tabindex="0">
-          <div class="work-item">
-            <div class="work-bg-parallax" role="img" aria-label="E-Commerce Web Application" style="background:linear-gradient(135deg,#0f3460,#533483);"></div>
-            <div class="work-content">
-              <h2 class="work-title skew-on-scroll">E-Commerce App</h2>
-              <p class="work-desc">Complete e-commerce platform — React.js, Node.js, Express.js, MongoDB. Secure APIs, product management &amp; VPS deployment.</p>
-              <div class="gmx-btn">VIEW PROJECT</div>
-            </div>
-          </div>
-        </div>
-        <div class="showreel-glass-frame reveal-up tilt-effect" role="presentation" tabindex="0">
-          <div class="work-item">
-            <div class="work-bg-parallax" role="img" aria-label="Billing Management System" style="background:linear-gradient(135deg,#1b4332,#2d6a4f);"></div>
-            <div class="work-content">
-              <h2 class="work-title skew-on-scroll">Billing Management</h2>
-              <p class="work-desc">Business billing platform — Django, DRF, SQL. Invoice generation, stock tracking, customer management &amp; financial data security.</p>
-              <div class="gmx-btn">VIEW PROJECT</div>
-            </div>
-          </div>
-        </div>
-        <div class="showreel-glass-frame reveal-up tilt-effect" role="presentation" tabindex="0">
-          <div class="work-item">
-            <div class="work-bg-parallax" role="img" aria-label="Custom LLM Experiment" style="background:linear-gradient(135deg,#3d0000,#7b0000);"></div>
-            <div class="work-content">
-              <h2 class="work-title skew-on-scroll">Custom LLM Experiment</h2>
-              <p class="work-desc">ML &amp; NLP exploration — model training, data preprocessing, and AI-driven text analysis. Hands-on GenAI research.</p>
-              <div class="gmx-btn">VIEW PROJECT</div>
-            </div>
-          </div>
-        </div>
-        <div class="showreel-glass-frame reveal-up tilt-effect" role="presentation" tabindex="0">
-          <div class="work-item">
-            <div class="work-bg-parallax" role="img" aria-label="Live Web Projects" style="background:linear-gradient(135deg,#001845,#003580);"></div>
-            <div class="work-content">
-              <h2 class="work-title skew-on-scroll">Live Web Projects</h2>
-              <p class="work-desc">physioabroad.org · handsonwashington.com · aniaaz.mckbytes.in — production deployments serving real users.</p>
-              <div class="gmx-btn">VISIT SITES</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="portfolio-progress" aria-hidden="true"><div class="portfolio-progress-fill"></div></div>
-    </div>
-
-    <div class="client-logos-strip" aria-label="Technology stack">
-      <div class="logos-track">
-        <span class="logo-text">PYTHON</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">DJANGO</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">REACT.JS</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">NODE.JS</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">SQL</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">MONGODB</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">PYTHON</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">DJANGO</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">REACT.JS</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">NODE.JS</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">SQL</span>
-        <span class="logo-divider">•</span>
-        <span class="logo-text">MONGODB</span>
-      </div>
-    </div>
-
-    <!-- IMPACT / STATS -->
-    <section class="gmx-proof-section" id="impacto">
-      <div class="proof-wrapper">
-        <div class="proof-copy">
-          <span class="proof-tag">IMPACT</span>
-          <h2>Code that ships. Systems that scale.</h2>
-          <p>Every project I build is focused on reliability, performance, and clean architecture. I analyze business requirements, optimize backend performance, and deliver production-ready applications that teams can depend on.</p>
-        </div>
-        <div class="proof-metrics">
-          <div class="metric"><h3 data-count="2+">2+</h3><p>Years of professional software engineering experience.</p></div>
-          <div class="metric"><h3 data-count="5+">5+</h3><p>Production applications built and deployed.</p></div>
-          <div class="metric"><h3 data-count="3">3</h3><p>Live websites serving real users globally.</p></div>
-        </div>
-      </div>
-      <p class="proof-disclaimer">Experience spans real estate platforms, e-commerce apps, billing systems, and AI/ML experiments.</p>
-      <div class="proof-cases">
-        <article class="proof-case reveal-up">
-          <span>ROLE 01</span>
-          <h3>Full Stack Developer</h3>
-          <p><strong>Company:</strong> Mckbytes Technologies, Vellore<br>
-          <strong>Period:</strong> Jul 2025 – Present<br>
-          <strong>Stack:</strong> Django, JavaScript, SQL, REST APIs<br>
-          <strong>Focus:</strong> Real estate management platform — property listing, booking workflows, admin dashboards.</p>
-        </article>
-        <article class="proof-case reveal-up">
-          <span>ROLE 02</span>
-          <h3>Junior Software Engineer</h3>
-          <p><strong>Company:</strong> DX Enablers Pvt. Ltd. (Remote)<br>
-          <strong>Period:</strong> Feb 2024 – Apr 2025<br>
-          <strong>Focus:</strong> JWT &amp; OAuth authentication, Agile sprints, debugging, performance optimization, system analysis.</p>
-        </article>
-        <article class="proof-case reveal-up">
-          <span>EDUCATION</span>
-          <h3>B.Tech — Computer Science</h3>
-          <p><strong>Institution:</strong> SRM Institute of Science and Technology<br>
-          <strong>Period:</strong> 2020 – 2024<br>
-          <strong>Certifications:</strong> Python (Livewire) · MySQL for Developers (Geekster)</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- SOCIAL PROOF / TECHNOLOGIES -->
-    <section class="gmx-social-proof" id="social-proof">
-      <p class="social-proof-label">WHAT I BRING TO THE TABLE</p>
-      <div class="testimonials-wrapper" aria-live="polite" aria-atomic="true">
-        <div class="testimonial-card active">
-          <blockquote>"I design scalable backend systems, build clean REST APIs, and ensure production deployments are reliable, secure, and maintainable — following Agile best practices."</blockquote>
-          <cite>— Backend &amp; API Development</cite>
-        </div>
-        <div class="testimonial-card">
-          <blockquote>"From React.js interfaces to Node.js backends and SQL/MongoDB databases — I deliver full-stack solutions that are responsive, performant, and built to last."</blockquote>
-          <cite>— Full Stack Engineering</cite>
-        </div>
-        <div class="testimonial-card">
-          <blockquote>"I've explored Machine Learning, NLP, and Generative AI — curious and constantly upskilling to stay at the edge of what modern software can do."</blockquote>
-          <cite>— AI &amp; Machine Learning Interest</cite>
-        </div>
-      </div>
-      <div class="testimonial-dots" id="testimonial-dots"></div>
-    </section>
-
-    <!-- QUALIFICATION -->
-    <section class="gmx-qualification" id="criterios">
-      <div class="qualification-wrapper reveal-up">
-        <span class="qualification-tag">IDEAL ROLES</span>
-        <h2>Built for teams that value clean code and reliable systems.</h2>
-        <p class="qualification-subtitle">I thrive in Agile environments where I can analyze requirements, architect solutions, and ship production-grade applications with real business impact.</p>
-        <div class="qualification-segments">
-          <span class="segment-pill">Backend / API Development</span>
-          <span class="segment-pill">Full Stack Applications</span>
-          <span class="segment-pill">Python / Django Engineering</span>
-          <span class="segment-pill">Web Application Development</span>
-          <span class="segment-pill">Database Design &amp; Optimization</span>
-          <span class="segment-pill">Remote-Friendly Teams</span>
-          <span class="segment-pill">Startup &amp; Scale-up</span>
-        </div>
-        <div class="qualification-grid">
-          <div class="qualification-item">
-            <h3>Ideal Environment</h3>
-            <p>Agile teams with real ownership, meaningful problems, and a culture of continuous improvement.</p>
-          </div>
-          <div class="qualification-item">
-            <h3>What I Deliver</h3>
-            <p>Production-ready applications, scalable APIs, optimized databases, and clean, maintainable code.</p>
-          </div>
-          <div class="qualification-item">
-            <h3>Availability</h3>
-            <p>Open to full-time roles — on-site in India or remote globally. Available immediately.</p>
-          </div>
-        </div>
-        <div class="qualification-promises">
-          <div class="promise-item reveal-up">
-            <span class="promise-check">✓</span>
-            <h4>Clean Architecture</h4>
-            <p>I write code that is readable, testable, and built to scale — not just to ship fast.</p>
-          </div>
-          <div class="promise-item reveal-up">
-            <span class="promise-check">✓</span>
-            <h4>End-to-End Ownership</h4>
-            <p>From requirement analysis to deployment — I take full ownership of the features I build.</p>
-          </div>
-          <div class="promise-item reveal-up">
-            <span class="promise-check">✓</span>
-            <h4>Continuous Growth</h4>
-            <p>Actively exploring ML, NLP, and GenAI — always upskilling to bring more value to the team.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="gmx-faq" id="faq">
-      <div class="faq-wrapper reveal-up">
-        <span class="faq-tag">FREQUENTLY ASKED QUESTIONS</span>
-        <h2>Common questions about working with me.</h2>
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>What technologies does Bharath specialise in?</summary>
-            <p>Python, Django, Django REST Framework, JavaScript, React.js, Node.js, Express.js, SQL, MongoDB, Git, Jenkins, and CI/CD pipelines.</p>
-          </details>
-          <details class="faq-item">
-            <summary>Is Bharath open to remote opportunities?</summary>
-            <p>Yes. I am open to both remote and on-site roles across India, and remote roles globally.</p>
-          </details>
-          <details class="faq-item">
-            <summary>How much professional experience does Bharath have?</summary>
-            <p>2+ years of professional experience, including roles as Full Stack Developer at Mckbytes Technologies and Junior Software Engineer at DX Enablers Pvt. Ltd.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What kind of projects has Bharath built?</summary>
-            <p>Real estate management platforms, e-commerce applications, billing management systems, custom LLM experiments, and 3 live production websites.</p>
-          </details>
-          <details class="faq-item">
-            <summary>What is Bharath's educational background?</summary>
-            <p>B.Tech in Computer Science and Engineering from SRM Institute of Science and Technology (2020–2024). Certified in Python (Livewire) and MySQL for Developers (Geekster).</p>
-          </details>
-          <details class="faq-item">
-            <summary>Is Bharath familiar with Agile development?</summary>
-            <p>Yes. I have hands-on experience in Agile sprint cycles, collaborating with cross-functional teams to deliver features, conduct code reviews, and iterate on feedback.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA MANIFESTO -->
-    <section class="gmx-manifesto" id="manifesto">
-      <div class="manifesto-wrapper reveal-up">
-        <h2 class="manifesto-title">I don't just write code.<br><span class="manifesto-accent">I build systems that work.</span></h2>
-        <p class="manifesto-desc">If your team needs a reliable Python developer who can own features end-to-end and ship production-ready software — let's talk.</p>
-        <a href="#aplicacao" class="gmx-btn-nav scroll-link manifesto-btn">HIRE ME</a>
-      </div>
-    </section>
-
-    <!-- FINAL MARQUEE STRIP -->
-    <div class="final-strip" aria-hidden="true">
-      <div class="final-strip-inner">
-        <span class="final-strip-item">BACKEND THAT SCALES <span class="dot"></span></span>
-        <span class="final-strip-item">APIS THAT PERFORM <span class="dot"></span></span>
-        <span class="final-strip-item">CODE THAT SHIPS <span class="dot"></span></span>
-        <span class="final-strip-item">SYSTEMS THAT LAST <span class="dot"></span></span>
-        <span class="final-strip-item">RESULTS THAT MATTER <span class="dot"></span></span>
-        <span class="final-strip-item">BACKEND THAT SCALES <span class="dot"></span></span>
-        <span class="final-strip-item">APIS THAT PERFORM <span class="dot"></span></span>
-        <span class="final-strip-item">CODE THAT SHIPS <span class="dot"></span></span>
-        <span class="final-strip-item">SYSTEMS THAT LAST <span class="dot"></span></span>
-        <span class="final-strip-item">RESULTS THAT MATTER <span class="dot"></span></span>
-      </div>
-    </div>
-
-    <!-- CONTACT / APPLICATION -->
-    <section class="application-form" id="aplicacao">
-      <div class="form-container reveal-up ice-glass">
-        <div class="form-success-overlay" id="form-success" role="status" aria-live="polite">
-          <div class="form-success-icon">✓</div>
-          <h3 class="form-success-title">MESSAGE SENT</h3>
-          <p class="form-success-desc">Thanks for reaching out! I'll get back to you within 24 hours.</p>
-        </div>
-        <div class="form-error-toast" id="form-error-toast" role="alert" aria-live="assertive">
-          <span class="toast-icon">!</span>
-          <span class="toast-text">Please fill in Name, Email, and Message.</span>
-        </div>
-        <div class="form-text">
-          <span class="form-tag">CONTACT</span>
-          <h2 class="form-title">Let's build something great?</h2>
-          <p class="form-desc">I'm actively looking for my next opportunity. Whether you have a role, a project, or just want to connect — fill in the form and I'll get back to you promptly.</p>
-          <ul class="form-bullets">
-            <li>Open to full-time &amp; freelance roles</li>
-            <li>Python, Django, Full Stack development</li>
-            <li>Available immediately</li>
-          </ul>
-        </div>
-        <form class="form-fields" id="gmx-form" novalidate>
-          <div class="input-row">
-            <div class="floating-input"><input type="text" id="gmx-nome" placeholder=" " required /><label>Your Name</label></div>
-            <div class="floating-input"><input type="email" id="gmx-email" placeholder=" " required /><label>Your E-mail</label></div>
-          </div>
-          <div class="input-row">
-            <div class="floating-input"><input type="tel" id="gmx-whats" placeholder=" " required inputmode="tel" autocomplete="tel" /><label>Your WhatsApp / Phone</label></div>
-            <div class="floating-input"><input type="text" id="gmx-marca" placeholder=" " required /><label>Company / Organization</label></div>
-          </div>
-          <div class="input-row">
-            <div class="floating-input"><input type="text" id="gmx-site" placeholder=" " /><label>Your Website or LinkedIn</label></div>
-            <div class="floating-input"><input type="text" id="gmx-objetivo" placeholder=" " /><label>Type of Role / Engagement</label></div>
-          </div>
-          <div class="input-row">
-            <div class="custom-select-wrapper" style="flex:1;">
-              <div class="custom-select-trigger" id="gmx-servico-trigger" role="button" tabindex="0" aria-label="Select opportunity type">
-                <span>Select Opportunity Type</span>
-                <div class="arrow" aria-hidden="true">▼</div>
-              </div>
-              <div class="custom-options" role="listbox" aria-label="Opportunity type list">
-                <span class="custom-option" role="option" data-value="Full-Time Employment">Full-Time Employment</span>
-                <span class="custom-option" role="option" data-value="Freelance Project">Freelance Project</span>
-                <span class="custom-option" role="option" data-value="Contract Role">Contract Role</span>
-                <span class="custom-option" role="option" data-value="Collaboration">Collaboration</span>
-                <span class="custom-option" role="option" data-value="Other">Other</span>
-              </div>
-              <input type="hidden" id="gmx-servico" value="Not defined" />
-            </div>
-            <div class="custom-select-wrapper" style="flex:1;">
-              <div class="custom-select-trigger" id="gmx-prazo-trigger" role="button" tabindex="0" aria-label="Select timeline">
-                <span>When do you need someone?</span>
-                <div class="arrow" aria-hidden="true">▼</div>
-              </div>
-              <div class="custom-options" role="listbox" aria-label="Timeline list">
-                <span class="custom-option" role="option" data-value="Immediately">Immediately</span>
-                <span class="custom-option" role="option" data-value="Within 2 weeks">Within 2 weeks</span>
-                <span class="custom-option" role="option" data-value="Next month">Next month</span>
-                <span class="custom-option" role="option" data-value="Just exploring">Just exploring</span>
-              </div>
-              <input type="hidden" id="gmx-prazo" value="Not defined" />
-            </div>
-          </div>
-          <div class="floating-input"><textarea id="gmx-mensagem" placeholder=" " rows="4" required></textarea><label>Tell me about the role or project</label></div>
-          <button id="gmx-submit" class="submit-btn gmx-btn-nav">SEND MESSAGE</button>
-          <p class="form-legal-note">By submitting, you agree to being contacted regarding this opportunity.</p>
-          <div class="direct-contact">
-            <p>Prefer to reach out directly?</p>
-            <a href="mailto:ajiabharath@gmail.com" class="wa-btn gmx-btn-nav">Email Me Directly</a>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="gmx-footer-premium">
-      <div class="footer-grid">
-        <div class="footer-col brand-col">
-          <h2 class="footer-logo">BHARATH A</h2>
-          <p class="footer-tagline">Python Developer &amp; Full Stack Engineer building scalable applications and backend systems.</p>
-        </div>
-        <div class="footer-col links-col">
-          <h3>Navigation</h3>
-          <a href="#inicio" class="scroll-link">Home</a>
-          <a href="#sobre" class="scroll-link">About</a>
-          <a href="#servicos" class="scroll-link">Skills</a>
-          <a href="#metodo" class="scroll-link">Experience</a>
-          <a href="#portfolio" class="scroll-link">Projects</a>
-          <a href="#impacto" class="scroll-link">Impact</a>
-          <a href="#criterios" class="scroll-link">Ideal Roles</a>
-          <a href="#faq" class="scroll-link">FAQ</a>
-        </div>
-        <div class="footer-col info-col">
-          <h3>Contact</h3>
-          <p>Phone: +91 6379573737</p>
-          <p>Email: ajiabharath@gmail.com</p>
-          <p style="margin-bottom:25px;">Location: Chennai, India</p>
-          <div class="footer-social">
-            <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener" class="insta-3d-link ice-glass" aria-label="LinkedIn">
-              <div class="insta-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom-bar">
-        <span>© 2025 Bharath A — All rights reserved.</span>
-        <span>BUILT FOR IMPACT</span>
-      </div>
-    </footer>
-  </main>
-
-  <!-- Floating CTA -->
-  <div class="gmx-floating-cta" id="floating-cta">
-    <a href="#aplicacao" class="scroll-link">
-      <span class="cta-pulse"></span>
-      HIRE ME
-    </a>
-  </div>
-
-  <!-- Email FAB (replacing WhatsApp) -->
-  <a href="mailto:ajiabharath@gmail.com" class="wa-fab" id="wa-fab" aria-label="Email Bharath">
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-  </a>
-
-  <!-- Progress ring -->
-  <div class="scroll-progress-ring" aria-hidden="true">
-    <svg viewBox="0 0 100 100">
-      <circle class="ring-track" cx="50" cy="50" r="46" />
-      <circle class="ring-fill" cx="50" cy="50" r="46" />
-    </svg>
-    <span class="scroll-perc">0</span>
-  </div>
-
-  <!-- Back to top -->
-  <div class="back-to-top" id="btn-top" role="button" tabindex="0" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-  </div>
-
-  <!-- Video modal -->
-  <div class="video-modal" aria-hidden="true">
-    <button class="close-btn" id="close-video" aria-label="Close video">CLOSE [X]</button>
-    <div class="video-wrapper"><video id="project-video" controls playsinline></video></div>
-  </div>
-
-  <!-- Service modal -->
-  <div class="service-modal" aria-hidden="true">
-    <div class="service-modal-bg"></div>
-    <div class="service-modal-content ice-glass">
-      <button class="service-close-btn" id="close-service" aria-label="Close service details">CLOSE [X]</button>
-      <span class="service-modal-tag" id="sm-tag">TAG</span>
-      <h2 class="service-modal-title" id="sm-title">Title</h2>
-      <div class="service-modal-body" id="sm-body">Full description...</div>
-      <a href="mailto:ajiabharath@gmail.com" class="gmx-btn-nav service-modal-btn">GET IN TOUCH</a>
-    </div>
-  </div>
 
   <!-- Cursor -->
-  <div class="gmx-cursor" aria-hidden="true"><span class="cursor-text">VIEW</span></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-  <!-- Scroll Section Indicator -->
-  <nav class="section-indicator" id="section-indicator" aria-label="Section navigation">
-    <button class="si-dot active" data-section="inicio" aria-label="Home"><span class="si-label">HOME</span></button>
-    <button class="si-dot" data-section="sobre" aria-label="About"><span class="si-label">ABOUT</span></button>
-    <button class="si-dot" data-section="servicos" aria-label="Skills"><span class="si-label">SKILLS</span></button>
-    <button class="si-dot" data-section="portfolio" aria-label="Projects"><span class="si-label">PROJECTS</span></button>
-    <button class="si-dot" data-section="impacto" aria-label="Impact"><span class="si-label">IMPACT</span></button>
-    <button class="si-dot" data-section="aplicacao" aria-label="Contact"><span class="si-label">CONTACT</span></button>
-  </nav>
-
-  <!-- Cookie Banner -->
-  <div class="lgpd-banner" id="lgpd-banner" role="dialog" aria-label="Cookie notice">
-    <div class="lgpd-content">
-      <p>This site uses cookies to improve your experience. By continuing, you agree to our privacy policy.</p>
-      <div class="lgpd-actions">
-        <button class="lgpd-accept" id="lgpd-accept">ACCEPT</button>
-        <button class="lgpd-reject" id="lgpd-reject">REJECT</button>
+  <!-- ── THEME TOGGLE ── -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <div class="ripple"></div>
+    <div class="toggle-particles">
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+    </div>
+    <div class="toggle-icon">
+      <div class="icon-moon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </div>
+      <div class="icon-sun">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+          <line x1="12" y1="21" x2="12" y2="23" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+          <line x1="1" y1="12" x2="3" y2="12" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+          <line x1="21" y1="12" x2="23" y2="12" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="#fcd34d" stroke-width="2" stroke-linecap="round"/>
+        </svg>
       </div>
     </div>
-  </div>
+  </button>
 
-  <!-- Libs (defer for performance) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-logo">Bharath A</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <a href="mailto:bharath122020@gmail.com" class="nav-cta">Contact</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <div>
+        <div class="hero-eyebrow animate-in">Python Developer &amp; AI Engineer — Chennai, India</div>
+        <h1 class="hero-name animate-in-d1">
+          Bharath<br><em>A.</em>
+        </h1>
+        <p class="hero-tagline animate-in-d2">
+          Building <strong>scalable backend systems</strong>, intelligent APIs, and production-grade full-stack applications — with an eye on <strong>AI/ML integration</strong>.
+        </p>
+        <div class="hero-ctas animate-in-d3">
+          <a href="mailto:bharath122020@gmail.com" class="btn-primary">Email Me</a>
+          <a href="#projects" class="btn-outline">View Projects</a>
+          <a href="https://github.com/Bharath8992" target="_blank" rel="noopener" class="btn-outline">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint animate-in-d4">
+        <span class="scroll-line"></span>
+        Scroll to explore
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-role-badge animate-in-d2">
+        <span class="status-dot"></span>
+        Open to Opportunities — Full-Time · Contract · Remote
+      </div>
+      <div class="hero-stats-grid animate-in-d3">
+        <div class="hero-stat">
+          <span class="hero-stat-num">2+</span>
+          <span class="hero-stat-label">Years Experience</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">5+</span>
+          <span class="hero-stat-label">Production Apps</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">5</span>
+          <span class="hero-stat-label">Live Deployments</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">10+</span>
+          <span class="hero-stat-label">Technologies</span>
+        </div>
+      </div>
+      <div class="animate-in-d4" style="font-size:0.8rem; color:var(--muted); line-height:1.7; font-weight:300;">
+        Target role: <strong style="color:var(--ink);">Senior Backend / Full Stack — 10–15 LPA</strong><br>
+        Stack: Django · React · PostgreSQL · Node.js · ML/AI<br>
+        B.Tech CSE — SRMIST (2024)
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about-section" id="about">
+    <div class="about-left">
+      <div class="section-label reveal">About</div>
+      <h2 class="section-heading reveal">Crafting systems that <em>scale</em></h2>
+      <div class="skill-cloud reveal reveal-delay-1">
+        <span class="s-pill">Python</span>
+        <span class="s-pill">Django</span>
+        <span class="s-pill">React.js</span>
+        <span class="s-pill">Node.js</span>
+        <span class="s-pill">PostgreSQL</span>
+        <span class="s-pill">MongoDB</span>
+        <span class="s-pill">REST APIs</span>
+        <span class="s-pill">Machine Learning</span>
+        <span class="s-pill">NLP</span>
+        <span class="s-pill">CI/CD</span>
+        <span class="s-pill">Jenkins</span>
+        <span class="s-pill">Selenium</span>
+      </div>
+    </div>
+    <div>
+      <p class="about-body reveal">
+        I'm a <strong>Python Developer and Full Stack Engineer</strong> with 2+ years of professional experience building real-world, production-grade applications. Currently at <strong>Mckbytes Technologies</strong>, where I architect and maintain a real estate management platform serving active users.
+      </p>
+      <p class="about-body reveal reveal-delay-1">
+        My work spans <strong>Django REST APIs</strong>, <strong>data processing pipelines</strong>, full-stack React applications, and <strong>VPS deployments</strong> with CI/CD automation. I take ownership from the first commit to the production server.
+      </p>
+      <p class="about-body reveal reveal-delay-2">
+        Beyond web development, I'm actively exploring <strong>Machine Learning, NLP, and Generative AI</strong> — having built custom LLM experiments and worked through model training fundamentals. This intersection of robust engineering and AI is where I'm headed next.
+      </p>
+      <div class="about-details reveal reveal-delay-3">
+        <div class="detail-row"><span class="detail-key">Location</span><span class="detail-val">Chennai, India</span></div>
+        <div class="detail-row"><span class="detail-key">Current Role</span><span class="detail-val">Full Stack Developer @ Mckbytes</span></div>
+        <div class="detail-row"><span class="detail-key">Education</span><span class="detail-val">B.Tech CSE — SRMIST (2024)</span></div>
+        <div class="detail-row"><span class="detail-key">Availability</span><span class="detail-val green">● Open to Opportunities</span></div>
+        <div class="detail-row"><span class="detail-key">Work Mode</span><span class="detail-val">On-site · Remote · Global</span></div>
+        <div class="detail-row"><span class="detail-key">Target CTC</span><span class="detail-val">10–15 LPA</span></div>
+        <div class="detail-row"><span class="detail-key">Email</span><span class="detail-val"><a href="mailto:bharath122020@gmail.com">bharath122020@gmail.com</a></span></div>
+        <div class="detail-row"><span class="detail-key">Phone</span><span class="detail-val">+91 6379573737</span></div>
+        <div class="detail-row"><span class="detail-key">GitHub</span><span class="detail-val"><a href="https://github.com/Bharath8992" target="_blank" rel="noopener">github.com/Bharath8992 ↗</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section class="skills-section" id="skills">
+    <div class="skills-intro">
+      <div>
+        <div class="section-label reveal">Technical Skills</div>
+        <h2 class="section-heading reveal">Full-stack <em>expertise</em></h2>
+      </div>
+      <p class="skills-desc reveal">From API design to database optimisation to CI/CD pipelines — I build complete, production-ready systems. Now actively expanding into AI/ML engineering.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <span class="skill-icon">⚙️</span>
+        <div class="skill-name">Backend Development</div>
+        <p class="skill-desc">Scalable server-side systems with clean architecture, optimised queries, and robust business logic.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">DRF</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <span class="skill-icon">🎨</span>
+        <div class="skill-name">Frontend Engineering</div>
+        <p class="skill-desc">Responsive, performant user interfaces bridging backend logic with polished experiences.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">React.js</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <span class="skill-icon">🤖</span>
+        <div class="skill-name">AI &amp; Machine Learning</div>
+        <p class="skill-desc">Custom LLM experiments, NLP pipelines, data preprocessing, and Generative AI exploration. Actively upskilling.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">ML</span>
+          <span class="skill-tag">NLP</span>
+          <span class="skill-tag">GenAI</span>
+          <span class="skill-tag">Data Processing</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-icon">🗄️</span>
+        <div class="skill-name">Databases</div>
+        <p class="skill-desc">Schema design, query optimisation, migration pipelines, structured and unstructured data handling.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Query Opt.</span>
+        </div>
+      </div>
+      <div class="skill-card span2 reveal reveal-delay-1">
+        <span class="skill-icon">🚀</span>
+        <div class="skill-name">DevOps &amp; Deployment</div>
+        <p class="skill-desc">End-to-end deployment pipelines — Git version control, Jenkins CI/CD automation, VPS server configuration, and reliable production rollouts. I've shipped 5+ live sites from development through domain configuration.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">Bitbucket</span>
+          <span class="skill-tag">Jenkins</span>
+          <span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">VPS</span>
+          <span class="skill-tag">Linux</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section class="experience-section" id="experience">
+    <div class="exp-header">
+      <div>
+        <div class="section-label reveal">Experience</div>
+        <h2 class="section-heading reveal">Work <em>history</em></h2>
+      </div>
+      <p class="reveal" style="font-size:0.95rem; color:var(--muted); font-weight:300; line-height:1.8;">2+ years building real-world applications in Agile environments, from junior development to full-stack ownership.</p>
+    </div>
+    <div class="exp-timeline">
+
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <span class="exp-period">Jul 2025 — Present</span>
+          <div class="exp-company">Mckbytes Technologies<br>Vellore, India</div>
+        </div>
+        <div>
+          <div class="exp-role">Full Stack Developer</div>
+          <ul class="exp-points">
+            <li>Developing and maintaining a real estate management platform using Django, JavaScript, and SQL — supporting property listing, search, and booking workflows.</li>
+            <li>Designing and building scalable backend APIs for core workflows and third-party integrations.</li>
+            <li>Implementing advanced search filters, booking flows, and admin dashboards for real-time property management.</li>
+            <li>Optimising database queries and overall application performance for high-volume data operations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <span class="exp-period">Feb 2024 — Apr 2025</span>
+          <div class="exp-company">DX Enablers Pvt. Ltd.<br>Vellore (Remote)</div>
+        </div>
+        <div>
+          <div class="exp-role">Junior Software Engineer</div>
+          <ul class="exp-points">
+            <li>Implemented JWT and OAuth authentication mechanisms for secure user management across applications.</li>
+            <li>Participated in Agile sprint cycles, collaborating cross-functionally to deliver features on schedule.</li>
+            <li>Conducted systematic debugging, troubleshooting, and performance optimisation for production systems.</li>
+            <li>Ensured code quality via software engineering best practices and version control workflows.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <span class="exp-period">2020 — 2024</span>
+          <div class="exp-company">SRMIST</div>
+        </div>
+        <div>
+          <div class="exp-role">B.Tech — Computer Science &amp; Engineering</div>
+          <ul class="exp-points">
+            <li>Comprehensive foundation in software development, data structures, algorithms, and system design.</li>
+            <li>Strong grounding in database systems, operating systems, networking, and software engineering practices.</li>
+            <li>Certifications: Python (Livewire) · MySQL for Developers (Geekster)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section class="projects-section" id="projects">
+    <div class="proj-intro">
+      <div>
+        <div class="section-label reveal">Projects</div>
+        <h2 class="section-heading reveal">Production-grade <em>applications</em></h2>
+      </div>
+      <p class="proj-desc reveal">Real-world applications built from scratch — designed for scalability, reliability, and business impact.</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="proj-card featured reveal">
+        <div>
+          <span class="proj-num">01 — Featured</span>
+          <div class="proj-name">Real Estate Management Platform</div>
+          <p class="proj-body">Full-stack property management system with user authentication, property listing workflows, admin dashboards, and real-time search with advanced filters. Built with REST APIs for scalability and maintainability.</p>
+          <div class="proj-stack">
+            <span class="proj-tag">Python</span>
+            <span class="proj-tag">Django</span>
+            <span class="proj-tag">DRF</span>
+            <span class="proj-tag">JavaScript</span>
+            <span class="proj-tag">SQL</span>
+            <span class="proj-tag">HTML/CSS</span>
+          </div>
+        </div>
+        <div class="proj-visual">🏠</div>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-emoji">🛒</span>
+        <span class="proj-num">02</span>
+        <div class="proj-name">E-Commerce Web Application</div>
+        <p class="proj-body">Complete e-commerce platform with secure backend APIs, product management system, responsive shopping interface, and scalable architecture. Deployed on VPS with full domain configuration.</p>
+        <div class="proj-stack">
+          <span class="proj-tag">React.js</span>
+          <span class="proj-tag">Node.js</span>
+          <span class="proj-tag">Express.js</span>
+          <span class="proj-tag">MongoDB</span>
+          <span class="proj-tag">VPS</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal reveal-delay-1">
+        <span class="proj-emoji">📄</span>
+        <span class="proj-num">03</span>
+        <div class="proj-name">Billing Management System</div>
+        <p class="proj-body">Backend-driven billing platform supporting invoice generation, stock tracking, and customer management. Integrated APIs for financial data with robust accuracy and consistency.</p>
+        <div class="proj-stack">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Django</span>
+          <span class="proj-tag">DRF</span>
+          <span class="proj-tag">SQL</span>
+          <span class="proj-tag">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-emoji">🤖</span>
+        <span class="proj-num">04</span>
+        <div class="proj-name">Custom LLM Experiment</div>
+        <p class="proj-body">Hands-on ML &amp; NLP exploration — custom LLM experiment covering model training workflows, data preprocessing pipelines, and AI-driven text analysis. Practical foundation in Generative AI.</p>
+        <div class="proj-stack">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Machine Learning</span>
+          <span class="proj-tag">NLP</span>
+          <span class="proj-tag">GenAI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="live-sites reveal">
+      <span class="live-label">Live Deployments →</span>
+      <div class="live-links">
+        <a href="https://physioabroad.org" target="_blank" rel="noopener" class="live-link">physioabroad.org ↗</a>
+        <a href="https://handsonwashington.com" target="_blank" rel="noopener" class="live-link">handsonwashington.com ↗</a>
+        <a href="https://aniaaz.mckbytes.in" target="_blank" rel="noopener" class="live-link">aniaaz.mckbytes.in ↗</a>
+        <a href="https://srivarammanamalai.com" target="_blank" rel="noopener" class="live-link">srivarammanamalai.com ↗</a>
+        <a href="https://3dotworld.in" target="_blank" rel="noopener" class="live-link">3dotworld.in ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="section-label reveal">Contact</div>
+        <h2 class="contact-big reveal">
+          Let's build<br>something <em>great</em>.
+        </h2>
+        <p class="contact-note reveal">
+          I'm actively seeking my next opportunity — full-time roles, contract engagements, or freelance projects. I respond to every message within 24 hours.
+        </p>
+
+        <div class="contact-email-block reveal">
+          <span class="contact-email-label">Email</span>
+          <a href="mailto:bharath122020@gmail.com" class="contact-email-addr">bharath122020@gmail.com</a>
+        </div>
+
+        <div class="contact-links reveal reveal-delay-1">
+          <a href="tel:+916379573737" class="contact-link-row">
+            <span class="contact-link-label">Phone / WhatsApp</span>
+            <span>
+              <span class="contact-link-val">+91 6379573737</span>
+              <span class="contact-link-arrow"> →</span>
+            </span>
+          </a>
+          <a href="https://github.com/Bharath8992" target="_blank" rel="noopener" class="contact-link-row">
+            <span class="contact-link-label">GitHub</span>
+            <span>
+              <span class="contact-link-val">github.com/Bharath8992</span>
+              <span class="contact-link-arrow"> ↗</span>
+            </span>
+          </a>
+          <div class="contact-link-row" style="cursor:default;">
+            <span class="contact-link-label">Location</span>
+            <span class="contact-link-val">Chennai, India · Remote Globally</span>
+          </div>
+        </div>
+
+        <div class="open-badges reveal reveal-delay-2">
+          <div class="open-title">Open To</div>
+          <div class="open-pills">
+            <span class="open-pill">Full-Time</span>
+            <span class="open-pill">Contract</span>
+            <span class="open-pill">Freelance</span>
+            <span class="open-pill">Remote</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right reveal reveal-delay-1">
+        <div class="info-grid">
+          <div class="info-block">
+            <div class="info-block-label">Target CTC</div>
+            <div class="info-block-val">10–15 LPA</div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">Availability</div>
+            <div class="info-block-val" style="color:var(--teal);">● Immediately</div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">Experience</div>
+            <div class="info-block-val">2+ Years</div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">Education</div>
+            <div class="info-block-val">B.Tech CSE<br>SRMIST</div>
+          </div>
+        </div>
+        <div class="info-block" style="margin-top:1.5px;">
+          <div class="info-block-label" style="margin-bottom:1rem;">Core Stack</div>
+          <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+            <span class="s-pill" style="font-size:0.75rem;">Python</span>
+            <span class="s-pill" style="font-size:0.75rem;">Django</span>
+            <span class="s-pill" style="font-size:0.75rem;">React.js</span>
+            <span class="s-pill" style="font-size:0.75rem;">Node.js</span>
+            <span class="s-pill" style="font-size:0.75rem;">PostgreSQL</span>
+            <span class="s-pill" style="font-size:0.75rem;">MongoDB</span>
+            <span class="s-pill" style="font-size:0.75rem;">REST APIs</span>
+            <span class="s-pill" style="font-size:0.75rem;">CI/CD</span>
+            <span class="s-pill" style="font-size:0.75rem;">ML/NLP</span>
+          </div>
+        </div>
+        <div class="info-block" style="margin-top:1.5px;">
+          <div class="info-block-label">Certifications</div>
+          <div class="info-block-val" style="font-size:0.9rem; font-weight:400; color:var(--muted); line-height:1.7;">
+            Python — Livewire<br>
+            MySQL for Developers — Geekster
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-brand">Bharath A</div>
+    <ul class="footer-nav">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <span class="footer-copy">© 2025 Bharath A</span>
+  </footer>
+
   <script>
-    if (!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent) && window.innerWidth >= 768) {
-      ['https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js',
-       'https://unpkg.com/three@0.128.0/examples/js/loaders/DRACOLoader.js'
-      ].forEach(function(src) {
-        var s = document.createElement('script'); s.src = src; s.defer = true;
-        document.head.appendChild(s);
-      });
+    /* ── Theme Toggle ── */
+    const themeBtn = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Restore saved preference
+    if (localStorage.getItem('theme') === 'dark') html.classList.add('dark');
+
+    themeBtn.addEventListener('click', () => {
+      // Burst animation
+      themeBtn.classList.remove('burst');
+      void themeBtn.offsetWidth; // reflow
+      themeBtn.classList.add('burst');
+      setTimeout(() => themeBtn.classList.remove('burst'), 700);
+
+      // Full-page ripple overlay
+      const overlay = document.createElement('div');
+      overlay.style.cssText = `
+        position:fixed; inset:0; z-index:7999; pointer-events:none;
+        background: radial-gradient(circle at bottom right, var(--gold-pale) 0%, transparent 70%);
+        opacity:0; transition: opacity 0.4s ease;
+      `;
+      document.body.appendChild(overlay);
+      requestAnimationFrame(() => { overlay.style.opacity = '1'; });
+      setTimeout(() => { overlay.style.opacity = '0'; }, 300);
+      setTimeout(() => overlay.remove(), 750);
+
+      // Toggle
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    /* ── Cursor ── */
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    function animateCursor() {
+      rx += (mx - rx) * 0.14;
+      ry += (my - ry) * 0.14;
+      cursor.style.left = mx + 'px';
+      cursor.style.top = my + 'px';
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animateCursor);
     }
-  </script>
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    animateCursor();
+    document.querySelectorAll('a, button, .s-pill, .skill-card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '18px'; cursor.style.height = '18px';
+        ring.style.width = '54px'; ring.style.height = '54px';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '10px'; cursor.style.height = '10px';
+        ring.style.width = '36px'; ring.style.height = '36px';
+      });
+    });
 
-  <!-- Override JS strings for Bharath's portfolio -->
-  <script>
-    window.__GMX_LANG = 'en';
-    window.__GMX_I18N = {
-      serviceData: {
-        webgl:       { tag: 'BACKEND • PYTHON • DJANGO', title: 'Backend Development', body: 'Python, Django, and Django REST Framework form the core of my backend stack. I build secure, scalable server-side systems with clean architecture, optimized database interactions, and robust authentication mechanisms.' },
-        branding:    { tag: 'FRONTEND • REACT • JAVASCRIPT', title: 'Frontend Engineering', body: 'React.js, JavaScript, HTML, and CSS for building responsive, user-friendly interfaces. I bridge the gap between backend logic and polished user experiences.' },
-        landingpage: { tag: 'API DESIGN • REST • AUTH', title: 'REST API Development', body: 'Designing and building RESTful APIs is my core strength. JWT, OAuth, microservices, and client-server architecture — built for reliability, security, and performance.' },
-        ia:          { tag: 'SQL • MONGODB • OPTIMIZATION', title: 'Database Management', body: 'SQL and MongoDB — from schema design to query optimization. I structure data efficiently to support fast, reliable, and scalable application backends.' },
-        trafego:     { tag: 'GIT • CI/CD • VPS • JENKINS', title: 'DevOps & Deployment', body: 'Git, Jenkins, CI/CD pipelines, and VPS deployment. I ensure code is version-controlled, tested, and shipped to production with confidence and zero downtime.' }
-      },
-      cursor: { VER: 'VIEW', ABRIR: 'OPEN', CLIQUE: 'CLICK' },
-      formError: 'Please fill in Name, Email, and Message to continue.',
-      formFallback: 'Not defined',
-      whatsappTemplate: function(nome, email, whats, marca, servico, msg) {
-        return '*NEW ENQUIRY — BHARATH.DEV*\n\n*Name:* ' + nome + '\n*E-mail:* ' + email + '\n*Phone:* ' + whats + '\n*Company:* ' + marca + '\n*Opportunity:* ' + servico + '\n\n*Message:* ' + msg;
-      },
-      testimonialLabel: function(i) { return 'Highlight ' + (i + 1); },
-      loaderText: 'CODE. BUILD. DEPLOY.'
-    };
+    /* ── Progress Bar ── */
+    const bar = document.getElementById('progressBar');
+    window.addEventListener('scroll', () => {
+      const s = document.documentElement.scrollTop;
+      const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      bar.style.width = (s / h * 100) + '%';
+    });
+
+    /* ── Scroll Reveal ── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    revealEls.forEach(el => io.observe(el));
+
+    /* ── Smooth Scroll ── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
   </script>
-  <script src="../script.js" defer></script>
-  <!-- Neon Tunnel -->
-  <script src="../tunel-gmx.js" defer></script>
+
 </body>
 </html>
