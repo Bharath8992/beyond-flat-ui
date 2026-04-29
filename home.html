@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bharath A | Python Developer & Full Stack Engineer</title>
+  <meta name="description" content="Results-driven Python Developer and Full Stack Engineer with 2+ years of experience designing, developing, and maintaining scalable web applications and backend systems." />
+  <meta name="theme-color" content="#050505" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bharath A — Python & Full Stack Developer" />
+  <meta property="og:description" content="Python Developer & Full Stack Engineer building scalable backend systems and high-performance applications." />
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #050505;
+      color: #e8e8e8;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─── CSS VARIABLES ─── */
+    :root {
+      --accent: #00d4ff;
+      --accent-2: #7c3aed;
+      --accent-3: #10b981;
+      --dark-bg: #050505;
+      --card-bg: #0d0d0d;
+      --border: rgba(255,255,255,0.08);
+      --text-muted: #888;
+      --text-secondary: #bbb;
+      --section-pad: 100px 5%;
+      --max-w: 1200px;
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    h1, h2, h3, h4, h5 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; line-height: 1.15; }
+    .synco { font-family: 'Syncopate', sans-serif; font-weight: 700; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── UTILITIES ─── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 5%; }
+    .tag-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(0,212,255,0.3);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      margin-bottom: 1rem;
+    }
+    .section-desc {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin-bottom: 3rem;
+    }
+
+    /* ─── HEADER ─── */
+    .gmx-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 5%;
+      background: rgba(5,5,5,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .gmx-logo {
+      font-family: 'Syncopate', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: #fff;
+    }
+    .header-nav { display: flex; gap: 1rem; align-items: center; }
+    .gmx-btn-nav {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid rgba(255,255,255,0.25);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      background: transparent;
+    }
+    .gmx-btn-nav:hover { background: var(--accent); border-color: var(--accent); color: #000; }
+    .gmx-btn-nav.primary { background: var(--accent); border-color: var(--accent); color: #000; }
+    .gmx-btn-nav.primary:hover { background: #00b8d9; border-color: #00b8d9; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0,212,255,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(124,58,237,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
+      max-width: var(--max-w);
+      width: 100%;
+      margin: 0 auto;
+    }
+    .hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .hero-label::before { content: ''; display: block; width: 30px; height: 1px; background: var(--accent); }
+    .hero-title {
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+    .hero-title .accent { color: var(--accent); }
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-end;
+    }
+    .stat-item { text-align: right; }
+    .stat-num {
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--accent);
+      display: block;
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; }
+
+    /* ─── MARQUEE ─── */
+    .marquee-wrap { overflow: hidden; padding: 1.2rem 0; background: rgba(0,212,255,0.04); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .marquee-inner { display: flex; gap: 2rem; animation: marqueeScroll 25s linear infinite; width: max-content; }
+    .marquee-item { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+    .marquee-dot { color: var(--accent); margin: 0 0.5rem; }
+    @keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ─── ABOUT ─── */
+    .about-section { padding: var(--section-pad); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .about-number {
+      font-family: 'Syncopate', sans-serif;
+      font-size: 8rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .about-desc {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
+    .about-desc strong { color: #fff; font-weight: 500; }
+    .pills-wrap { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
+    .pill {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      transition: all 0.3s;
+    }
+    .pill:hover { border-color: var(--accent); color: var(--accent); }
+    .about-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+    }
+    .about-card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .about-card-sub { color: var(--accent); font-size: 0.85rem; letter-spacing: 0.1em; margin-bottom: 1.5rem; text-transform: uppercase; }
+    .detail-row { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-label { color: var(--text-muted); }
+    .detail-value { color: #fff; font-weight: 500; }
+    .detail-value.green { color: var(--accent-3); }
+
+    /* ─── SKILLS ─── */
+    .skills-section { padding: var(--section-pad); background: #080808; }
+    .skills-header { text-align: center; margin-bottom: 4rem; }
+    .skills-header .section-desc { margin: 0 auto; }
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .bento-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .bento-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .bento-card:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-3px); }
+    .bento-card:hover::before { opacity: 1; }
+    .bento-card.wide { grid-column: span 2; }
+    .bento-tag { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); font-weight: 600; display: block; margin-bottom: 0.75rem; }
+    .bento-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .bento-title { font-size: 1.15rem; font-weight: 600; color: #fff; margin-bottom: 0.75rem; }
+    .bento-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .tech-tag { padding: 0.25rem 0.7rem; background: rgba(0,212,255,0.06); border: 1px solid rgba(0,212,255,0.15); border-radius: 4px; font-size: 0.75rem; color: var(--accent); }
+
+    /* ─── EXPERIENCE ─── */
+    .experience-section { padding: var(--section-pad); }
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .exp-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      position: relative;
+      transition: border-color 0.3s;
+    }
+    .exp-card:hover { border-color: rgba(0,212,255,0.25); }
+    .exp-num {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      font-family: 'Syncopate', sans-serif;
+      font-size: 1.8rem;
+      color: rgba(0,212,255,0.1);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .exp-role { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
+    .exp-company { color: var(--accent); font-size: 0.85rem; font-weight: 500; margin-bottom: 0.3rem; }
+    .exp-period { color: var(--text-muted); font-size: 0.8rem; letter-spacing: 0.05em; margin-bottom: 1.2rem; }
+    .exp-points { list-style: none; }
+    .exp-points li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      padding: 0.35rem 0 0.35rem 1.2rem;
+      position: relative;
+      line-height: 1.55;
+    }
+    .exp-points li::before { content: '›'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+    /* ─── PROJECTS ─── */
+    .projects-section { padding: var(--section-pad); background: #080808; }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .project-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--card-bg);
+      transition: all 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .project-thumb {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-content { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
+    .project-name { font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 0.6rem; }
+    .project-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem; flex: 1; }
+    .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .stack-tag { padding: 0.2rem 0.65rem; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 3px; font-size: 0.72rem; color: var(--text-muted); }
+
+    /* ─── STATS STRIP ─── */
+    .stats-section { padding: 80px 5%; background: linear-gradient(135deg, rgba(0,212,255,0.04) 0%, rgba(124,58,237,0.04) 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; max-width: var(--max-w); margin: 0 auto; text-align: center; }
+    .stat-big { font-size: 3rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; color: var(--accent); display: block; }
+    .stat-desc { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    /* ─── CONTACT FORM ─── */
+    .contact-section { padding: var(--section-pad); }
+    .contact-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+    .contact-info p { color: var(--text-secondary); line-height: 1.75; margin-bottom: 2rem; }
+    .contact-link { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text-secondary); transition: color 0.2s; }
+    .contact-link:hover { color: var(--accent); }
+    .contact-link-icon { width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; }
+    .form-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.85rem 1rem;
+      color: #fff;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.3s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--accent); background: rgba(0,212,255,0.04); }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
+    .form-group select option { background: #1a1a1a; color: #fff; }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: var(--accent);
+      border: none;
+      border-radius: 6px;
+      color: #000;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Inter', sans-serif;
+      margin-top: 0.5rem;
+    }
+    .submit-btn:hover { background: #00b8d9; transform: translateY(-1px); }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .form-status {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .form-status.success { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); color: #10b981; display: block; }
+    .form-status.error { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #ef4444; display: block; }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      padding: 60px 5% 30px;
+      border-top: 1px solid var(--border);
+      background: #030303;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; max-width: var(--max-w); margin: 0 auto 3rem; }
+    .footer-brand h3 { font-family: 'Syncopate', sans-serif; font-size: 1.1rem; margin-bottom: 1rem; }
+    .footer-brand p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; max-width: 320px; }
+    .footer-col h4 { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .footer-col a { display: block; color: var(--text-secondary); font-size: 0.9rem; padding: 0.3rem 0; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; max-width: var(--max-w); margin: 0 auto; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    .footer-bottom span { color: var(--text-muted); font-size: 0.8rem; }
+
+    /* ─── FLOATING CTA ─── */
+    .floating-cta {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      z-index: 990;
+    }
+    .floating-cta a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 20px rgba(0,212,255,0.3);
+      transition: all 0.3s;
+    }
+    .floating-cta a:hover { background: #00b8d9; box-shadow: 0 6px 30px rgba(0,212,255,0.5); transform: translateY(-2px); }
+
+    /* ─── SCROLL PROGRESS ─── */
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent); z-index: 9999; transition: width 0.1s linear; width: 0%; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
+      .stat-item { text-align: left; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .bento-grid { grid-template-columns: 1fr 1fr; }
+      .bento-card.wide { grid-column: span 2; }
+      .exp-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      :root { --section-pad: 70px 5%; }
+      .bento-grid { grid-template-columns: 1fr; }
+      .bento-card.wide { grid-column: span 1; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .header-nav .gmx-btn-nav:first-child { display: none; }
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+    .fade-up-d1 { animation-delay: 0.1s; }
+    .fade-up-d2 { animation-delay: 0.2s; }
+    .fade-up-d3 { animation-delay: 0.3s; }
+    .fade-up-d4 { animation-delay: 0.4s; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ─── HEADER ─── -->
+  <header class="gmx-header">
+    <div class="gmx-logo">BHARATH.DEV</div>
+    <nav class="header-nav">
+      <a href="#skills" class="gmx-btn-nav">Skills</a>
+      <a href="#projects" class="gmx-btn-nav">Projects</a>
+      <a href="#contact" class="gmx-btn-nav primary">Hire Me</a>
+    </nav>
+  </header>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home">
+    <div class="hero-grid container">
+      <div>
+        <div class="hero-label fade-up fade-up-d1">Available for hire — 2025</div>
+        <h1 class="hero-title fade-up fade-up-d2">
+          Python Developer<br>
+          &amp; <span class="accent">Full Stack</span><br>
+          Engineer
+        </h1>
+        <p class="hero-subtitle fade-up fade-up-d3">
+          2+ years building scalable backend APIs, high-performance database systems, and full-stack web applications using Django, React, and modern cloud-ready architectures.
+        </p>
+        <div class="hero-ctas fade-up fade-up-d4">
+          <a href="#contact" class="gmx-btn-nav primary">Hire Me</a>
+          <a href="#projects" class="gmx-btn-nav">View Projects</a>
+          <a href="mailto:bharath122020@gmail.com" class="gmx-btn-nav">Email Me</a>
+        </div>
+      </div>
+      <div class="hero-stats fade-up fade-up-d3">
+        <div class="stat-item">
+          <span class="stat-num">2+</span>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">5+</span>
+          <div class="stat-label">Production Apps</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3</span>
+          <div class="stat-label">Live Deployments</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── MARQUEE ─── -->
+  <div class="marquee-wrap">
+    <div class="marquee-inner">
+      <span class="marquee-item">Python Developer<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">Django REST Framework<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">Full Stack Engineer<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">React.js &amp; Node.js<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">PostgreSQL &amp; MongoDB<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">REST API Design<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">CI/CD &amp; DevOps<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">Machine Learning<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">Python Developer<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">Django REST Framework<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">Full Stack Engineer<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">React.js &amp; Node.js<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">PostgreSQL &amp; MongoDB<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">REST API Design<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">CI/CD &amp; DevOps<span class="marquee-dot">•</span></span>
+      <span class="marquee-item">Machine Learning<span class="marquee-dot">•</span></span>
+    </div>
+  </div>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="about-section" id="about">
+    <div class="about-grid">
+      <div>
+        <span class="about-number" aria-hidden="true">01</span>
+        <span class="tag-label reveal">About Me</span>
+        <h2 class="section-title reveal">Bharath A —<br>Full Stack Developer</h2>
+        <p class="about-desc reveal">
+          I'm a <strong>Python Developer and Full Stack Engineer</strong> based in Chennai, India, with 2+ years of professional experience building production-grade web applications and backend systems.
+        </p>
+        <p class="about-desc reveal">
+          I specialise in <strong>scalable backend API development</strong> using Django and Django REST Framework, efficient <strong>data processing</strong> with CSV/JSON pipelines, <strong>database-driven applications</strong> with PostgreSQL and MongoDB, and delivering robust full-stack solutions using React.js and Node.js.
+        </p>
+        <p class="about-desc reveal">
+          Beyond web development, I actively explore <strong>Machine Learning, NLP, and Generative AI</strong> — having completed hands-on experiments in model training and text analysis, and continuously upskilling in modern AI/ML techniques.
+        </p>
+        <div class="pills-wrap reveal">
+          <span class="pill">Python</span>
+          <span class="pill">Django</span>
+          <span class="pill">React.js</span>
+          <span class="pill">Node.js</span>
+          <span class="pill">REST APIs</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">MongoDB</span>
+          <span class="pill">Machine Learning</span>
+        </div>
+      </div>
+      <div class="about-card reveal">
+        <div class="about-card-title">Bharath A</div>
+        <div class="about-card-sub">Python Developer · Full Stack Engineer</div>
+        <div class="detail-row"><span class="detail-label">Location</span><span class="detail-value">Chennai, India</span></div>
+        <div class="detail-row"><span class="detail-label">Experience</span><span class="detail-value">2+ Years</span></div>
+        <div class="detail-row"><span class="detail-label">Education</span><span class="detail-value">B.Tech — CSE, SRMIST</span></div>
+        <div class="detail-row"><span class="detail-label">Current Role</span><span class="detail-value">Full Stack Developer @ Mckbytes</span></div>
+        <div class="detail-row"><span class="detail-label">Availability</span><span class="detail-value green">● Open to Opportunities</span></div>
+        <div class="detail-row"><span class="detail-label">Work Mode</span><span class="detail-value">On-site · Remote · Global</span></div>
+        <div class="detail-row"><span class="detail-label">Target CTC</span><span class="detail-value">10–15 LPA</span></div>
+        <div class="detail-row"><span class="detail-label">Email</span><span class="detail-value">bharath122020@gmail.com</span></div>
+        <div class="detail-row"><span class="detail-label">Phone</span><span class="detail-value">+91 6379573737</span></div>
+        <br>
+        <a href="mailto:bharath122020@gmail.com" class="gmx-btn-nav primary" style="width:100%; text-align:center; display:block;">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section class="skills-section" id="skills">
+    <div class="skills-header">
+      <span class="tag-label reveal">Skills</span>
+      <h2 class="section-title reveal">Technical Expertise</h2>
+      <p class="section-desc reveal">Full-stack capabilities — from high-performance backend APIs to production deployments and AI/ML exploration.</p>
+    </div>
+    <div class="bento-grid">
+
+      <div class="bento-card reveal">
+        <span class="bento-tag">Backend · Python · Django</span>
+        <div class="bento-icon">⚙️</div>
+        <h3 class="bento-title">Backend Development</h3>
+        <p class="bento-desc">Building secure, scalable server-side systems with clean architecture, optimised database interactions, and robust business logic.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Django</span>
+          <span class="tech-tag">Django REST Framework</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express.js</span>
+        </div>
+      </div>
+
+      <div class="bento-card reveal">
+        <span class="bento-tag">Frontend · React · JavaScript</span>
+        <div class="bento-icon">🎨</div>
+        <h3 class="bento-title">Frontend Engineering</h3>
+        <p class="bento-desc">Designing responsive, performant user interfaces that bridge backend logic with polished user experiences across all devices.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">React.js</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+        </div>
+      </div>
+
+      <div class="bento-card reveal">
+        <span class="bento-tag">API Design · REST · Auth</span>
+        <div class="bento-icon">🔗</div>
+        <h3 class="bento-title">REST API Development</h3>
+        <p class="bento-desc">Designing and building RESTful APIs with JWT and OAuth authentication, third-party integrations, and microservices architecture.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">REST APIs</span>
+          <span class="tech-tag">JWT</span>
+          <span class="tech-tag">OAuth</span>
+          <span class="tech-tag">Postman</span>
+          <span class="tech-tag">API Integration</span>
+        </div>
+      </div>
+
+      <div class="bento-card reveal">
+        <span class="bento-tag">SQL · PostgreSQL · MongoDB</span>
+        <div class="bento-icon">🗄️</div>
+        <h3 class="bento-title">Database Management</h3>
+        <p class="bento-desc">Database design, query optimisation, CSV/JSON data processing, migration pipelines, and structured &amp; unstructured data handling for production-grade applications.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Data Migration</span>
+          <span class="tech-tag">Query Optimisation</span>
+        </div>
+      </div>
+
+      <div class="bento-card wide reveal">
+        <span class="bento-tag">Git · CI/CD · VPS · Jenkins</span>
+        <div class="bento-icon">🚀</div>
+        <h3 class="bento-title">DevOps &amp; Deployment</h3>
+        <p class="bento-desc">End-to-end deployment pipelines — Git version control, Jenkins CI/CD automation, VPS server configuration, and reliable production rollouts with zero downtime.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Git</span>
+          <span class="tech-tag">GitHub</span>
+          <span class="tech-tag">Bitbucket</span>
+          <span class="tech-tag">Jenkins</span>
+          <span class="tech-tag">CI/CD Pipelines</span>
+          <span class="tech-tag">VPS Deployment</span>
+          <span class="tech-tag">Linux</span>
+        </div>
+      </div>
+
+      <div class="bento-card reveal">
+        <span class="bento-tag">Data · ML · NLP · GenAI</span>
+        <div class="bento-icon">🤖</div>
+        <h3 class="bento-title">AI &amp; Machine Learning</h3>
+        <p class="bento-desc">Hands-on exploration of ML and NLP — custom LLM experiments, data preprocessing, model training fundamentals, and Generative AI concepts. Actively upskilling in this domain.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Machine Learning</span>
+          <span class="tech-tag">NLP</span>
+          <span class="tech-tag">Generative AI</span>
+          <span class="tech-tag">Data Processing</span>
+          <span class="tech-tag">Python</span>
+        </div>
+      </div>
+
+      <div class="bento-card reveal">
+        <span class="bento-tag">Data Handling · Automation</span>
+        <div class="bento-icon">📊</div>
+        <h3 class="bento-title">Data Processing &amp; Automation</h3>
+        <p class="bento-desc">Python automation scripts, CSV/JSON data pipelines, data cleaning and transformation, validation workflows, and Selenium-based scripting for business process automation.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Python Automation</span>
+          <span class="tech-tag">CSV Processing</span>
+          <span class="tech-tag">Data Transformation</span>
+          <span class="tech-tag">Selenium</span>
+          <span class="tech-tag">Webhooks</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <span class="tag-label reveal">Experience</span>
+      <h2 class="section-title reveal">Work History</h2>
+      <p class="section-desc reveal">2+ years building real-world applications in Agile environments, from junior development to full-stack ownership.</p>
+    </div>
+    <div class="exp-grid" style="max-width:var(--max-w); margin:0 auto; padding:0 5%;">
+
+      <div class="exp-card reveal">
+        <div class="exp-num">01</div>
+        <div class="exp-role">Full Stack Developer</div>
+        <div class="exp-company">Mckbytes Technologies, Vellore</div>
+        <div class="exp-period">Jul 2025 – Present</div>
+        <ul class="exp-points">
+          <li>Developing and maintaining a real estate management platform using Django, JavaScript, and SQL — supporting property listing, search, and booking workflows.</li>
+          <li>Designing and building scalable backend APIs to handle core application workflows and third-party integrations.</li>
+          <li>Implementing advanced search filters, booking functionality, and admin dashboards for real-time property management.</li>
+          <li>Optimising database queries and overall application performance for high-volume data operations.</li>
+          <li>Conducting debugging, system testing, and code optimisation to improve reliability and performance.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-num">02</div>
+        <div class="exp-role">Junior Software Engineer</div>
+        <div class="exp-company">DX Enablers Pvt. Ltd. — Vellore (Remote)</div>
+        <div class="exp-period">Feb 2024 – Apr 2025</div>
+        <ul class="exp-points">
+          <li>Implemented JWT and OAuth authentication mechanisms for secure application access and user management.</li>
+          <li>Participated in Agile sprint cycles, collaborating with cross-functional teams to deliver application features on schedule.</li>
+          <li>Conducted systematic debugging, troubleshooting, and performance optimisation for production systems.</li>
+          <li>Analysed system requirements and implemented application enhancements aligned with business objectives.</li>
+          <li>Ensured code quality by adhering to software engineering best practices and version control workflows.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-num">03</div>
+        <div class="exp-role">Education</div>
+        <div class="exp-company">SRM Institute of Science &amp; Technology</div>
+        <div class="exp-period">2020 – 2024</div>
+        <ul class="exp-points">
+          <li>B.Tech in Computer Science and Engineering — comprehensive foundation in software development, data structures, algorithms, and system design.</li>
+          <li>Strong academic grounding in database systems, operating systems, networks, and software engineering practices.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-num">04</div>
+        <div class="exp-role">Certifications &amp; Continuous Learning</div>
+        <div class="exp-company">Professional Development</div>
+        <div class="exp-period">Ongoing</div>
+        <ul class="exp-points">
+          <li><strong style="color:#fff;">Python</strong> — Livewire (certified)</li>
+          <li><strong style="color:#fff;">MySQL for Developers</strong> — Geekster (certified)</li>
+          <li>Actively upskilling in Machine Learning, Natural Language Processing, and Generative AI concepts through hands-on projects and self-directed study.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <span class="tag-label reveal">Projects</span>
+      <h2 class="section-title reveal">Production-Grade Applications</h2>
+      <p class="section-desc reveal">Real-world applications built from scratch — designed for scalability, reliability, and business impact.</p>
+    </div>
+    <div class="projects-grid" style="padding:0 5%;">
+
+      <div class="project-card reveal">
+        <div class="project-thumb" style="background: linear-gradient(135deg,#1a1a2e,#16213e);">🏠</div>
+        <div class="project-content">
+          <h3 class="project-name">Real Estate Management Platform</h3>
+          <p class="project-desc">Full-stack property management system with user authentication, property listing workflows, admin dashboards, and real-time search with advanced filters. Built with REST APIs for scalability and maintainability.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Django</span>
+            <span class="stack-tag">Django REST Framework</span>
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">SQL</span>
+            <span class="stack-tag">HTML/CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb" style="background: linear-gradient(135deg,#0f3460,#533483);">🛒</div>
+        <div class="project-content">
+          <h3 class="project-name">E-Commerce Web Application</h3>
+          <p class="project-desc">Complete e-commerce platform with secure backend APIs, product management system, responsive shopping interface, and scalable backend architecture. Deployed on a VPS server with full domain configuration.</p>
+          <div class="project-stack">
+            <span class="stack-tag">React.js</span>
+            <span class="stack-tag">Node.js</span>
+            <span class="stack-tag">Express.js</span>
+            <span class="stack-tag">MongoDB</span>
+            <span class="stack-tag">VPS Deployment</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb" style="background: linear-gradient(135deg,#1b4332,#2d6a4f);">📄</div>
+        <div class="project-content">
+          <h3 class="project-name">Billing Management System</h3>
+          <p class="project-desc">Backend-driven business billing platform supporting invoice generation, stock tracking, and customer management. Integrated APIs for billing data and transactions, with robust data accuracy and consistency for financial operations.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Django</span>
+            <span class="stack-tag">Django REST Framework</span>
+            <span class="stack-tag">SQL</span>
+            <span class="stack-tag">REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb" style="background: linear-gradient(135deg,#3d0000,#7b0000);">🤖</div>
+        <div class="project-content">
+          <h3 class="project-name">Custom LLM Experiment</h3>
+          <p class="project-desc">Hands-on exploration of Machine Learning and NLP — custom LLM experiment covering model training workflows, data preprocessing pipelines, and AI-driven text analysis. Demonstrates practical understanding of Generative AI fundamentals.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Machine Learning</span>
+            <span class="stack-tag">NLP</span>
+            <span class="stack-tag">Data Preprocessing</span>
+            <span class="stack-tag">Generative AI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="grid-column: span 2;">
+        <div class="project-thumb" style="background: linear-gradient(135deg,#001845,#003580); height:120px;">🌐</div>
+        <div class="project-content">
+          <h3 class="project-name">Live Production Websites</h3>
+          <p class="project-desc">Multiple live websites deployed and serving real users globally — demonstrating end-to-end ownership from development through deployment and domain configuration.</p>
+          <div class="project-stack">
+            <span class="stack-tag">physioabroad.org</span>
+            <span class="stack-tag">handsonwashington.com</span>
+            <span class="stack-tag">aniaaz.mckbytes.in</span>
+            <span class="stack-tag">srivarammanamalai.com</span>
+            <span class="stack-tag">3dotworld.in</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── STATS ─── -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="reveal">
+        <span class="stat-big">2+</span>
+        <div class="stat-desc">Years Professional Experience</div>
+      </div>
+      <div class="reveal">
+        <span class="stat-big">5+</span>
+        <div class="stat-desc">Production Applications Built</div>
+      </div>
+      <div class="reveal">
+        <span class="stat-big">5</span>
+        <div class="stat-desc">Live Websites Deployed</div>
+      </div>
+      <div class="reveal">
+        <span class="stat-big">10+</span>
+        <div class="stat-desc">Technologies Mastered</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT FORM ─── -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div>
+        <span class="tag-label reveal">Contact</span>
+        <h2 class="section-title reveal" style="font-size:2.2rem;">Let's build something great together.</h2>
+        <p class="reveal" style="color:var(--text-secondary); line-height:1.75; margin-bottom:2rem;">
+          I'm actively seeking my next opportunity — whether it's a full-time role, contract engagement, or freelance project. Fill in the form and I'll respond within 24 hours.
+        </p>
+
+        <a href="mailto:bharath122020@gmail.com" class="contact-link reveal">
+          <div class="contact-link-icon">✉</div>
+          <div>
+            <div style="color:#fff; font-size:0.88rem; font-weight:500;">Email</div>
+            <div style="font-size:0.85rem;">bharath122020@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+916379573737" class="contact-link reveal">
+          <div class="contact-link-icon">📞</div>
+          <div>
+            <div style="color:#fff; font-size:0.88rem; font-weight:500;">Phone</div>
+            <div style="font-size:0.85rem;">+91 6379573737</div>
+          </div>
+        </a>
+        <div class="contact-link reveal" style="cursor:default;">
+          <div class="contact-link-icon">📍</div>
+          <div>
+            <div style="color:#fff; font-size:0.88rem; font-weight:500;">Location</div>
+            <div style="font-size:0.85rem;">Chennai, India — Open to Remote Globally</div>
+          </div>
+        </div>
+        <div class="contact-link reveal">
+          <div class="contact-link-icon">💼</div>
+          <div>
+            <div style="color:#fff; font-size:0.88rem; font-weight:500;">GitHub</div>
+            <div style="font-size:0.85rem;">github.com/Bharath8992</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;" class="reveal">
+          <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--text-muted); margin-bottom:0.75rem;">Open to</div>
+          <div class="pills-wrap" style="margin-top:0;">
+            <span class="pill">Full-Time Roles</span>
+            <span class="pill">Contract</span>
+            <span class="pill">Freelance</span>
+            <span class="pill">Remote</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── WORKING CONTACT FORM ─── -->
+      <div class="form-card reveal">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="from_name">Your Name *</label>
+            <input type="text" id="from_name" name="from_name" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="from_email">Your Email *</label>
+            <input type="email" id="from_email" name="from_email" placeholder="john@company.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" />
+          </div>
+          <div class="form-group">
+            <label for="company">Company / Organisation</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="opportunity_type">Opportunity Type</label>
+            <select id="opportunity_type" name="opportunity_type">
+              <option value="">Select type</option>
+              <option>Full-Time Employment</option>
+              <option>Freelance Project</option>
+              <option>Contract Role</option>
+              <option>Collaboration</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="timeline">When do you need someone?</label>
+            <select id="timeline" name="timeline">
+              <option value="">Select timeline</option>
+              <option>Immediately</option>
+              <option>Within 2 weeks</option>
+              <option>Next month</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell me about the role or project *</label>
+          <textarea id="message" name="message" placeholder="Describe the opportunity, tech stack, location, and any other relevant details..." required></textarea>
+        </div>
+        <button class="submit-btn" id="submitBtn" onclick="sendEmail()">SEND MESSAGE</button>
+        <div class="form-status" id="formStatus"></div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:1rem; text-align:center;">By submitting, you agree to being contacted regarding this opportunity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>BHARATH A</h3>
+        <p>Python Developer &amp; Full Stack Engineer — building scalable backend systems, high-performance APIs, and production-ready web applications that teams depend on.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+916379573737">+91 6379573737</a>
+        <a href="mailto:bharath122020@gmail.com">bharath122020@gmail.com</a>
+        <a href="https://github.com/Bharath8992" target="_blank" rel="noopener">github.com/Bharath8992</a>
+        <a href="#contact">Chennai, India</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Bharath A — All rights reserved.</span>
+      <span>Built for impact.</span>
+    </div>
+  </footer>
+
+  <!-- ─── FLOATING CTA ─── -->
+  <div class="floating-cta">
+    <a href="#contact">🚀 Hire Me</a>
+  </div>
+
+  <script>
+    /* ─── EmailJS CONTACT FORM ───
+       SETUP INSTRUCTIONS (5 minutes):
+       1. Go to https://www.emailjs.com and create a free account
+       2. Add an Email Service (Gmail recommended) → copy your Service ID
+       3. Create an Email Template with these variables:
+          {{from_name}}, {{from_email}}, {{phone}}, {{company}},
+          {{opportunity_type}}, {{timeline}}, {{message}}
+          Set "To Email" to: bharath122020@gmail.com
+       4. Copy your Public Key from Account → API Keys
+       5. Replace the 3 placeholder values below
+    ─────────────────────────────────────── */
+    const EMAILJS_PUBLIC_KEY   = 'YOUR_PUBLIC_KEY';   // e.g. 'abc123XYZdef'
+    const EMAILJS_SERVICE_ID   = 'YOUR_SERVICE_ID';   // e.g. 'service_xxxxxxx'
+    const EMAILJS_TEMPLATE_ID  = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xxxxxxx'
+
+    (function() {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+    })();
+
+    function sendEmail() {
+      const btn = document.getElementById('submitBtn');
+      const statusEl = document.getElementById('formStatus');
+
+      const name    = document.getElementById('from_name').value.trim();
+      const email   = document.getElementById('from_email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Basic validation
+      if (!name || !email || !message) {
+        statusEl.className = 'form-status error';
+        statusEl.textContent = 'Please fill in your name, email, and message to continue.';
+        return;
+      }
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        statusEl.className = 'form-status error';
+        statusEl.textContent = 'Please enter a valid email address.';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'SENDING…';
+      statusEl.className = 'form-status';
+      statusEl.style.display = 'none';
+
+      const templateParams = {
+        from_name:        name,
+        from_email:       email,
+        phone:            document.getElementById('phone').value.trim() || 'Not provided',
+        company:          document.getElementById('company').value.trim() || 'Not provided',
+        opportunity_type: document.getElementById('opportunity_type').value || 'Not specified',
+        timeline:         document.getElementById('timeline').value || 'Not specified',
+        message:          message
+      };
+
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(function() {
+          statusEl.className = 'form-status success';
+          statusEl.textContent = '✓ Message sent! I\'ll get back to you within 24 hours.';
+          btn.textContent = 'MESSAGE SENT ✓';
+          // Clear form
+          ['from_name','from_email','phone','company','message'].forEach(id => {
+            document.getElementById(id).value = '';
+          });
+          document.getElementById('opportunity_type').value = '';
+          document.getElementById('timeline').value = '';
+          setTimeout(() => { btn.disabled = false; btn.textContent = 'SEND MESSAGE'; }, 4000);
+        })
+        .catch(function(error) {
+          statusEl.className = 'form-status error';
+          statusEl.textContent = 'Something went wrong. Please email me directly at bharath122020@gmail.com';
+          btn.disabled = false;
+          btn.textContent = 'SEND MESSAGE';
+          console.error('EmailJS error:', error);
+        });
+    }
+
+    // Allow Enter to submit (except in textarea)
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA' && e.target.tagName !== 'SELECT') {
+        if (['from_name','from_email','phone','company'].includes(e.target.id)) {
+          sendEmail();
+        }
+      }
+    });
+
+    /* ─── SCROLL PROGRESS ─── */
+    window.addEventListener('scroll', function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scrollProgress').style.width = scrolled + '%';
+    });
+
+    /* ─── SCROLL REVEAL ─── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(function(el) { observer.observe(el); });
+
+    /* ─── SMOOTH SCROLL ─── */
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
